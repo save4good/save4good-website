@@ -6,52 +6,56 @@
 <title>Save4Good — More value for businesses. More possibilities for people.</title>
 <meta name="description" content="Save4Good is a connected infrastructure that helps businesses recover revenue, reach new buyers, simplify operations, and helps families find the right essentials at the right time and price.">
 <style>
-:root{--green:#0b4d3a;--green2:#0f6b4f;--light:#e8f5ec;--mint:#d9f0dd;--cream:#fdf8ef;--ink:#12211c;--muted:#5a6b64;--orange:#c96a3b;--line:#dce8df}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+:root{--green:#0b3d2e;--green2:#0f6b4f;--mint:#e6f2e8;--cream:#fdf7ec;--ink:#14231d;--muted:#5b6d64;--rust:#c0653a;--line:#dde7df}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
 a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 .wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:10}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;color:var(--green)}
 .brand img{width:42px;height:42px;border-radius:10px}
-.navlinks{display:flex;gap:22px;color:#33473e;font-size:14px;flex-wrap:wrap}
-.btn{display:inline-block;border:1px solid var(--green);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px}
+.navlinks{display:flex;gap:20px;color:#33473e;font-size:14px;flex-wrap:wrap}
+.btn{display:inline-block;border:1px solid var(--green);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px;white-space:nowrap}
 .btn.solid{background:var(--green);color:#fff}.btn.light{background:#fff;color:var(--green)}
-.hero{background:linear-gradient(180deg,#fdf8ef,#fff);padding:34px 0 26px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
-.eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--orange);font-weight:800;font-size:12px}
+.hero{background:var(--cream);padding:30px 0 24px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start;position:relative}
+.eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--rust);font-weight:800;font-size:12px}
 h1{font-size:52px;line-height:1.05;margin:10px 0 14px;color:var(--green)}
-h1 span{color:var(--orange)}h1 em{font-style:normal;color:var(--orange)}
+h1 span{color:var(--rust)}
 .lead{font-size:17px;color:#33473e;max-width:560px}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
 .pills{display:flex;gap:18px;flex-wrap:wrap;color:#33473e;font-size:14px;font-weight:600}
-.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 24px rgba(11,77,58,.08)}
-.card h3{margin:0 0 6px}.tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:800}
-.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px}
-.steps div{background:#f4f8f5;border-radius:12px;padding:12px;font-size:13px}
-.stats{display:grid;grid-template-columns:1.1fr 1fr 1fr 1fr 1fr;gap:18px;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);align-items:start}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 10px 26px rgba(11,61,46,.10)}
+.tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px}
+.steps div{background:#f4f8f5;border-radius:12px;padding:11px;font-size:13px}
+.stats{display:grid;grid-template-columns:1.05fr 1fr 1fr 1fr 1fr;gap:18px;padding:28px 0;border-bottom:1px solid var(--line)}
 .stats b{font-size:30px;color:var(--green);display:block}.stats small{color:var(--muted)}
 h2{font-size:32px;line-height:1.15;color:var(--green);margin:0 0 10px}
-section{padding:34px 0}
+section{padding:32px 0}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.fam{background:var(--light);border-radius:18px;padding:22px}.biz{background:#eef3f7;border-radius:18px;padding:22px}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px}
+.photocard{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.photocard img{width:100%;height:220px;object-fit:cover}
+.photocard .body{padding:20px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.chips span{background:#f4f8f5;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px}
 .tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
-.tile{border:1px solid var(--line);border-radius:14px;padding:14px;font-weight:700;font-size:14px;background:#fff}
-.tile small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.tile{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;font-weight:700;font-size:14px}
+.tile img{width:100%;height:90px;object-fit:cover}.tile span{display:block;padding:10px 12px 12px}
 .cols6{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:18px}
 .cols6 h4{margin:6px 0;color:var(--green)}.cols6 p{font-size:13px;color:var(--muted);margin:0}
 .founder{background:var(--cream);border-radius:18px;padding:22px}
+.founderimg{border-radius:18px;overflow:hidden}.founderimg img{width:100%;height:100%;min-height:280px;object-fit:cover}
 .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:14px}
 .three div{border-top:3px solid var(--green);padding-top:10px}
 .bars{display:flex;gap:8px;align-items:end;height:90px;margin-top:14px}
 .bars i{display:block;flex:1;background:#9cc8a8;border-radius:6px 6px 0 0}
-.final{background:var(--green);color:#fff;border-radius:0;padding:44px 0;text-align:center}
+.final{background:var(--green);color:#fff;padding:44px 0}
 .final h2{color:#fff;font-size:38px}.final .btn.solid{background:#fff;color:var(--green);border-color:#fff}.final .btn.light{background:transparent;color:#fff;border-color:#fff}
-footer{padding:18px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.heroimg{border-radius:18px;overflow:hidden;background:#d9ead9;min-height:260px}
-.heroimg img{width:100%;height:100%;object-fit:cover;min-height:260px}
-@media(max-width:820px){h1{font-size:36px}.hero-grid,.two,.tiles,.cols6,.three{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+.finalgrid{display:grid;grid-template-columns:1.4fr .6fr;gap:24px;align-items:center}
+.finalgrid img{border-radius:50%;width:100%;aspect-ratio:1;object-fit:cover}
+footer{background:var(--green);color:#cfe8d6;padding:16px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:860px){h1{font-size:36px}.hero-grid,.two,.tiles,.cols6,.three,.finalgrid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.navlinks{display:none}}
 </style>
 </head>
 <body>
@@ -71,7 +75,7 @@ footer{padding:18px 0;color:var(--muted);font-size:13px;display:flex;justify-con
 <p class="pills"><span>📈 Revenue recovery</span><span>⚙️ Simpler operations</span><span>👥 More affordability</span></p>
 </div>
 <div class="card">
-<p style="display:flex;justify-content:space-between"><b>Save4Good</b><span class="tag">Connected infrastructure</span></p>
+<p style="display:flex;justify-content:space-between;align-items:center"><b>Save4Good</b><span class="tag">Connected infrastructure</span></p>
 <p style="color:var(--muted)">Where available value meets real demand</p>
 <div class="two" style="gap:12px">
 <div style="background:#eef7ef;border-radius:12px;padding:12px"><span class="tag">Businesses</span><br><b>Inventory · Meals · Supplies</b></div>
@@ -82,35 +86,33 @@ footer{padding:18px 0;color:var(--muted);font-size:13px;display:flex;justify-con
 <div><b>02 Activate value</b><br>Share offers, listings, and buyer channels.</div>
 <div><b>03 Measure results</b><br>Recover revenue, reach new buyers, and reduce waste.</div>
 </div>
-<p style="color:var(--muted);font-size:13px;margin-top:14px">📈 Designed for commercial performance and community impact.<br>One infrastructure, multiple buying channels, real demand.</p>
+<p style="color:var(--muted);font-size:13px;margin-top:14px">📈 <b>Designed for commercial performance and community impact.</b><br>One infrastructure, multiple buying channels, real demand.</p>
 </div>
-</div>
-<div class="heroimg"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&q=80" alt="Fresh produce in a grocery store"></div>
-</section>
+</div></section>
 
 <div class="wrap stats">
-<div><h2>A bigger opportunity hiding in plain sight.</h2></div>
-<div><span class="tag">Industry context, not Save4Good performance.</span><br><b>$380B</b><small>U.S. surplus-food value.</small></div>
-<div><b>29%</b><small>of U.S. food went unsold or uneaten.</small></div>
-<div><b>1.05B</b><small>tonnes wasted globally.</small></div>
-<div><b>40M+</b><small>people in the U.S. face food insecurity.</small></div>
+<div><h2>A bigger opportunity hiding in plain sight.</h2><div style="height:6px;width:90px;background:#8fd0a0;border-radius:99px"></div></div>
+<div><span class="tag">Industry context, not Save4Good performance.</span><br><b>$380B</b><br><small>U.S. surplus-food value.</small></div>
+<div><b>29%</b><br><small>of U.S. food went unsold or uneaten.</small></div>
+<div><b>1.05B</b><br><small>tonnes wasted globally.</small></div>
+<div><b>40M+</b><br><small>people in the U.S. face food insecurity.</small></div>
 </div>
 
 <section id="families"><div class="wrap two">
-<div class="fam"><h2>Why families come back to Save4Good.</h2><p>More of the everyday essentials you need, at prices that make life a little easier — for your family, your budget, and your peace of mind.</p><div class="chips"><span>Everyday essentials</span><span>Greater affordability</span><span>Real savings</span><span>New places to shop</span></div></div>
-<div class="biz" id="businesses"><h2>Why businesses choose Save4Good.</h2><p>Turn real demand into revenue recovery, simpler operations, and stronger community impact — all through one connected infrastructure.</p><div class="chips"><span>Demand intelligence</span><span>Smarter pricing</span><span>New buyer channels</span><span>Operational efficiency</span></div></div>
+<article class="photocard"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80" alt="Fresh produce and groceries"><div class="body"><h2>Why families come back to Save4Good.</h2><p>More of the everyday essentials you need, at prices that make life a little easier — for your family, your budget, and your peace of mind.</p><div class="chips"><span>Everyday essentials</span><span>Greater affordability</span><span>Real savings</span><span>New places to shop</span></div></div></article>
+<article class="photocard" id="businesses"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80" alt="A smiling food business worker in an apron"><div class="body"><h2>Why businesses choose Save4Good.</h2><p>Turn real demand into revenue recovery, simpler operations, and stronger community impact — all through one connected infrastructure.</p><div class="chips"><span>Demand intelligence</span><span>Smarter pricing</span><span>New buyer channels</span><span>Operational efficiency</span></div></div></article>
 </div></section>
 
 <section id="industries"><div class="wrap">
 <h2>Built for more than grocery.</h2>
-<p style="color:var(--muted);max-width:620px">A connected ecosystem that helps more businesses move value, reach more people, and keep good products in use.</p>
+<p style="color:var(--muted);max-width:640px">A connected ecosystem that helps more businesses move value, reach more people, and keep good products in use.</p>
 <div class="tiles">
-<div class="tile">🛒 Grocery &amp; Retail<small>Food, essentials, and clearance</small></div>
-<div class="tile">🍽️ Restaurants &amp; Bakeries<small>Ready meals and daily surplus</small></div>
-<div class="tile">🛏️ Hotels &amp; Hospitality<small>Guest, kitchen, and housekeeping stock</small></div>
-<div class="tile">👥 Employers &amp; Workplaces<small>Pre-orders for workers</small></div>
-<div class="tile">🏛️ Institutions &amp; Community<small>Schools, charities, and groups</small></div>
-<div class="tile">📦 Bulk &amp; B2B<small>Private lots for qualified buyers</small></div>
+<div class="tile"><img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Fresh vegetables"><span>🛒 Grocery &amp; Retail</span></div>
+<div class="tile"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="A restaurant dish"><span>🍽️ Restaurants &amp; Bakeries</span></div>
+<div class="tile"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="A hotel room"><span>🛏️ Hotels &amp; Hospitality</span></div>
+<div class="tile"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="A modern workplace"><span>👥 Employers &amp; Workplaces</span></div>
+<div class="tile"><img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" alt="An institution building"><span>🏛️ Institutions &amp; Community</span></div>
+<div class="tile"><img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80" alt="Warehouse shelves"><span>📦 Bulk &amp; B2B</span></div>
 </div>
 </div></section>
 
@@ -118,37 +120,43 @@ footer{padding:18px 0;color:var(--muted);font-size:13px;display:flex;justify-con
 <h2>Why businesses choose Save4Good.</h2>
 <p style="color:var(--muted)">Enterprise-grade infrastructure to turn surplus and variable inventory into real value, with less complexity and more impact.</p>
 <div class="cols6">
-<div><h4>Demand intelligence</h4><p>Understand real demand and move the right products to the right buyers.</p></div>
-<div><h4>Revenue recovery</h4><p>Recapture value from surplus and short-dated inventory.</p></div>
-<div><h4>Smarter pricing</h4><p>Keep products moving with flexible, market-informed strategies.</p></div>
-<div><h4>Simpler operations</h4><p>Streamline listing, fulfilment, and buyer access in one place.</p></div>
-<div><h4>New buyer channels</h4><p>Reach families, institutions, workplaces, and more — beyond your usual customers.</p></div>
-<div><h4>More affordability</h4><p>Make everyday essentials more accessible for the community.</p></div>
+<div>📊<h4>Demand intelligence</h4><p>Understand real demand and move the right products to the right buyers.</p></div>
+<div>💰<h4>Revenue recovery</h4><p>Recapture value from surplus and short-dated inventory.</p></div>
+<div>🏷️<h4>Smarter pricing</h4><p>Keep products moving with flexible, market-informed strategies.</p></div>
+<div>⚙️<h4>Simpler operations</h4><p>Streamline listing, fulfilment, and buyer access in one place.</p></div>
+<div>👥<h4>New buyer channels</h4><p>Reach families, institutions, workplaces, and more — beyond your usual customers.</p></div>
+<div>🌿<h4>More affordability</h4><p>Make everyday essentials more accessible for the community.</p></div>
 </div>
 </div></section>
 
-<section id="story"><div class="wrap two">
+<section id="story"><div class="wrap two" style="grid-template-columns:.9fr 1.1fr">
+<div class="founderimg"><img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?auto=format&fit=crop&w=1200&q=80" alt="A woman shopping in a grocery store aisle"></div>
+<div>
 <div class="founder"><span class="tag">Our founder's story</span><h2>“It started with a simple moment at the grocery store.”</h2><p>As a mom, I saw perfectly good products going to waste while families like mine were looking for more affordable options. I knew there had to be a better way — one that creates value for businesses, support for families, and a stronger, more connected community.</p><p><b>— Save4Good Founder</b></p></div>
-<div><h2>More value that goes further.</h2><p>Save4Good helps keep good products in use, strengthens local businesses and communities, and supports a healthier, more resilient planet.</p>
-<div class="three"><div><b>People</b><br><small>More access to essentials</small></div><div><b>Businesses</b><br><small>More value and growth</small></div><div><b>The Planet</b><br><small>Less waste, more good use</small></div></div></div>
+<div style="margin-top:18px"><h2>More value that goes further.</h2><p>Save4Good helps keep good products in use, strengthens local businesses and communities, and supports a healthier, more resilient planet.</p>
+<div class="three"><div><b>👥 People</b><br><small>More access to essentials</small></div><div><b>📈 Businesses</b><br><small>More value and growth</small></div><div><b>🌿 The Planet</b><br><small>Less waste, more good use</small></div></div></div>
+</div>
 </div></section>
 
 <section><div class="wrap two">
 <div><h2>Better for people.<br>Better for business.<br>Better for the <span style="color:var(--green2)">planet</span>.</h2><p style="color:var(--muted)">A connected infrastructure that creates real value across your business, your community, and the world we share.</p></div>
 <div class="card"><p style="display:flex;justify-content:space-between"><b>Save4Good / Business Intelligence</b><span class="tag">Example KPI framework</span></p>
-<p style="display:flex;gap:12px;flex-wrap:wrap;font-size:13px"><span>Incremental sales<br><small>Recover value from existing inventory.</small></span><span>Demand reach<br><small>Access new buyers and markets.</small></span><span>Operational efficiency<br><small>Simplify and streamline operations.</small></span><span>Estimated waste diversion<br><small>Keep more good products in use.</small></span></p>
+<p style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:13px"><span><b>Incremental sales</b><br>Recover value from existing inventory.</span><span><b>Demand reach</b><br>Access new buyers and markets.</span><span><b>Operational efficiency</b><br>Simplify and streamline operations.</span><span><b>Estimated waste diversion</b><br>Keep more good products in use.</span></p>
 <div class="bars"><i style="height:30%"></i><i style="height:45%"></i><i style="height:55%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:65%"></i><i style="height:85%"></i></div>
 <p style="font-size:12px;color:var(--muted)">Illustrative dashboard structure. Not actual customer data or performance represented.</p></div>
 </div></section>
 </main>
 
-<div class="final"><div class="wrap">
+<div class="final"><div class="wrap finalgrid">
+<div>
 <p class="tag" style="color:#cfe8d6">Let's turn opportunity into lasting impact.</p>
-<h2>When businesses grow and families thrive,<br>people, businesses, and the planet all move forward.</h2>
+<h2>When businesses grow and families thrive, people, businesses, and the planet all move forward.</h2>
 <p>Build a more connected, resilient, and abundant food system for your business, your community, and future generations.</p>
-<div class="cta" style="justify-content:center"><a class="btn solid" href="#businesses">Explore business partnership →</a><a class="btn light" href="#families">Explore family experience →</a></div>
+<div class="cta"><a class="btn solid" href="#businesses">Explore business partnership →</a><a class="btn light" href="#families">Explore family experience →</a></div>
+</div>
+<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="The planet from space">
 </div></div>
 
-<footer class="wrap"><span>Save4Good | Connected infrastructure for people, businesses, and the planet.</span><span>Industry context: USDA, UNEP, Feeding America, and other publicly available sources.</span></footer>
+<footer><div class="wrap"><span>Save4Good | Connected infrastructure for people, businesses, and the planet. · November 2025</span><span>Industry context: USDA, UNEP, Feeding America, and other publicly available sources.</span></div></footer>
 </body>
 </html>
