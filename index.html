@@ -62,7 +62,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <header><div class="wrap nav">
 <a class="brand" href="#top"><img src="logo.png" alt="Save4Good logo — dark green S with a globe">Save4Good</a>
 <nav class="navlinks"><a href="#how">How it works</a><a href="#industries">Industries</a><a href="#families">For families</a><a href="#businesses">For businesses</a><a href="#story">Our story</a></nav>
-<div><a class="btn light" href="#families">For families</a> <a class="btn solid" href="#businesses">Request Partnership</a></div>
+<div><a class="btn light" href="#families">For families</a> <a class="btn solid" href="#partnership" onclick="document.getElementById('partnership').style.display='block';">Request Partnership</a></div>
 </div></header>
 
 <main id="top">
@@ -71,7 +71,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <p class="eyebrow">Built by a mom. Built as infrastructure for growth.</p>
 <h1>More value for businesses.<br><span>More possibilities for people.</span></h1>
 <p class="lead">We connect what businesses have with what people actually need. Save4Good is building the infrastructure that helps grocery stores, restaurants, hotels and other businesses unlock revenue, reach new buyers and simplify operations, while giving families more choices, better prices and greater peace of mind.</p>
-<div class="cta"><a class="btn solid" href="#businesses">Request Partnership →</a><a class="btn light" href="#families">Explore for my family →</a></div>
+<div class="cta"><a class="btn solid" href="#partnership" onclick="document.getElementById('partnership').style.display='block';">Request Partnership →</a><a class="btn light" href="#families">Explore for my family →</a></div>
 <p class="pills"><span>📈 Revenue recovery</span><span>⚙️ Simpler operations</span><span>👥 More affordability</span></p>
 </div>
 <div class="card">
@@ -90,6 +90,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </div>
 </div></section>
 
+<section><div class="wrap">
+<h2>Stop guessing what people need. Start connecting with real demand.</h2>
+<p>Families have shopping lists. Employers have meal needs. Senior homes have dietary requirements and wishlists. Businesses have inventory, prepared meals and supplies.</p>
+<p>Save4Good is building the infrastructure to connect them.</p>
+<p>The goal is better purchasing decisions, more relevant offers, new revenue opportunities and fewer resources going to waste.</p>
+</div></section>
 <div class="wrap stats">
 <div><h2>Billions in value. Millions of unmet needs. One missing connection.</h2><div style="height:6px;width:90px;background:#8fd0a0;border-radius:99px"></div></div>
 <div><span class="tag">Industry context, not Save4Good performance.</span><br><b>$380B</b><br><small>U.S. surplus-food value<br>2024 · <a href="https://refed.org/" target="_blank" rel="noopener">ReFED</a></small></div>
@@ -113,7 +119,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <li><b>Community wishlists</b> — real wishlists that can become purchasing and donation opportunities.</li>
 </ul>
 </div></div></article>
-<article class="photocard" id="businesses"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80" alt="A smiling food business worker in an apron"><div class="body"><h2>Your next customer. Your next sale. Your next opportunity.</h2><p>Turn real demand into revenue recovery, simpler operations, and stronger community impact — all through one connected infrastructure.</p><div class="chips"><span>Demand intelligence</span><span>Smarter pricing</span><span>New buyer channels</span><span>Operational efficiency</span></div></div></article>
+<article class="photocard" id="businesses"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80" alt="A smiling food business worker in an apron"><div class="body"><h2>Your next customer. Your next sale. Your next opportunity.</h2><p>Turn real demand into revenue recovery, simpler operations, and stronger community impact — all through one connected infrastructure.</p><div class="chips"><span>Demand intelligence</span><span>Smarter pricing</span><span>New buyer channels</span><span>Operational efficiency</span></div><p style="margin-top:16px"><a class="btn solid" href="#partnership" onclick="document.getElementById('partnership').style.display='block';">Request Partnership →</a></p></div></article>
 </div></section>
 
 <section id="industries"><div class="wrap">
@@ -129,7 +135,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </div>
 </div></section>
 
-<section id="how"><div class="wrap">
+
+
+<section id="partnership" style="display:none"><div class="wrap"><div class="wrap">
 <h2>Business Recovery Infrastructure</h2>
 <p style="color:var(--muted)">Your next customer. Your next sale. Your next opportunity. Your inventory holds more value than you think. Save4Good is building the infrastructure to connect your business with real demand, open new revenue channels, support smarter pricing, and make everyday operations easier.</p>
 <div class="cols6">
@@ -140,10 +148,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <div>👥<h4>New buyer channels</h4><p>New sales channels. Reach families, institutions, workplaces, and more — beyond your usual customers — and grow profitability.</p></div>
 <div>🌿<h4>More affordability</h4><p>Inventory optimization. Move the right stock at the right time, and make everyday essentials more accessible for the community.</p></div>
 </div>
-</div></section>
+</div>
 
-
-<section id="partnership"><div class="wrap">
 <h2>More than a listing. A partnership that grows your business.</h2>
 <p style="color:var(--muted);max-width:680px">Save4Good is building a partnership model around your business, not just a page for your products. When you request a partnership, this is what we work toward with you, agreed in writing before any listing goes live.</p>
 <div class="three">
@@ -185,16 +191,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <h2>Two clear paths.</h2>
 <div class="two">
 <div class="card"><h3>For Families — Explore</h3><p>Explore the marketplace, discover how shopping works, and join an interest list. A real account comes later — no working login is suggested here.</p><p><a class="btn light" href="#families">Explore for my family →</a></p></div>
-<div class="card"><h3>For Businesses — Request Partnership</h3><p>View revenue opportunities, see the operational workflow, and request a partnership conversation — including a monthly performance meeting and a written performance development plan. A business dashboard comes later — no working login is suggested here.</p><p><a class="btn solid" href="#businesses">Request Partnership →</a></p></div>
+<div class="card"><h3>For Businesses — Request Partnership</h3><p>View revenue opportunities, see the operational workflow, and request a partnership conversation — including a monthly performance meeting and a written performance development plan. A business dashboard comes later — no working login is suggested here.</p><p><a class="btn solid" href="#partnership" onclick="document.getElementById('partnership').style.display='block';">Request Partnership →</a></p></div>
 </div>
 </div></section>
 
-<section><div class="wrap">
-<h2>Stop guessing what people need. Start connecting with real demand.</h2>
-<p>Families have shopping lists. Employers have meal needs. Senior homes have dietary requirements and wishlists. Businesses have inventory, prepared meals and supplies.</p>
-<p>Save4Good is building the infrastructure to connect them.</p>
-<p>The goal is better purchasing decisions, more relevant offers, new revenue opportunities and fewer resources going to waste.</p>
-</div></section>
 </main>
 
 <div class="final"><div class="wrap finalgrid">
@@ -202,7 +202,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 <p class="tag" style="color:#cfe8d6">Let's turn opportunity into lasting impact.</p>
 <h2>More revenue. More opportunity. More good.</h2>
 <p>For the businesses that keep our communities running. For the families who depend on them. For a planet that deserves better.</p><p>Save4Good is connected infrastructure that helps businesses grow, families thrive, and resources go further.</p>
-<div class="cta"><a class="btn solid" href="#businesses">Request Partnership →</a><a class="btn light" href="#families">Explore family experience →</a></div>
+<div class="cta"><a class="btn solid" href="#partnership" onclick="document.getElementById('partnership').style.display='block';">Request Partnership →</a><a class="btn light" href="#families">Explore family experience →</a></div>
 </div>
 <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="The planet from space">
 </div></div>
