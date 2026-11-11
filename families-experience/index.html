@@ -1,0 +1,535 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Save4Good: Families Experience</title><meta name="description" content="See what your family will find on Save4Good."><style>
+
+:root{--green:#0b3d2e;--green2:#0f6b4f;--mint:#e6f2e8;--cream:#fdf7ec;--ink:#14231d;--muted:#5b6d64;--rust:#c0653a;--line:#dde7df}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;color:var(--green)}
+.brand img{width:42px;height:42px;border-radius:10px}
+.navlinks{display:flex;gap:20px;color:#33473e;font-size:14px;flex-wrap:wrap}
+.btn{display:inline-block;border:1px solid var(--green);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px;white-space:nowrap}
+.btn.solid{background:var(--green);color:#fff}.btn.light{background:#fff;color:var(--green)}
+.hero{background:var(--cream);padding:36px 0 28px}
+.eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--rust);font-weight:800;font-size:12px}
+h1{font-size:52px;line-height:1.05;margin:10px 0 14px;color:var(--green)}h1 span{color:var(--rust)}
+h2{font-size:32px;line-height:1.15;color:var(--green);margin:0 0 10px}
+.lead{font-size:17px;color:#33473e;max-width:680px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 10px 26px rgba(11,61,46,.10)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+section{padding:32px 0}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:18px;padding:28px 0;border-bottom:1px solid var(--line)}
+.stats b{font-size:30px;color:var(--green);display:block}.stats small{color:var(--muted)}
+.tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.photocard{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.photocard img{width:100%;height:220px;object-fit:cover}.photocard .body{padding:20px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.steps div{background:#f4f8f5;border-radius:12px;padding:11px;font-size:13px}
+.final{background:var(--green);color:#fff;padding:44px 0}.final h2{color:#fff;font-size:38px}
+.final .btn.solid{background:#fff;color:var(--green);border-color:#fff}.final .btn.light{background:transparent;color:#fff;border-color:#fff}
+footer{background:var(--green);color:#cfe8d6;padding:16px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+details{border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0;background:#fff}
+details summary{font-weight:800;color:var(--green);cursor:pointer}
+@media(max-width:860px){h1{font-size:36px}.two,.three,.steps{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+
+
+:root{
+  --green:#0b3d2e; --green2:#14604a; --green-deep:#06231a;
+  --cream:#fbf6ec; --mint:#e9f2ec; --mint2:#f3f7f3;
+  --rust:#b95c33; --rust-dark:#8f4525;
+  --ink:#17251f; --muted:#5d6f66; --line:#dfe8e1; --gold:#c9a227;
+  --bg:#fbf6ec; --surface:#ffffff;
+  --shadow:0 14px 34px rgba(11,61,46,.09);
+  --shadow-sm:0 4px 14px rgba(11,61,46,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;color:var(--green);line-height:1.18;font-weight:700}
+a{color:inherit}
+img{max-width:100%}
+button,select,input,textarea{font:inherit;min-height:44px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--green);border-radius:999px;padding:12px 22px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;background:#fff;color:var(--green);transition:background .15s ease,color .15s ease}
+.btn:hover{background:var(--mint)}
+.btn.solid{background:var(--green);color:#fff}
+.btn.solid:hover{background:var(--green2)}
+.btn.rust{background:var(--rust);border-color:var(--rust);color:#fff}
+.btn.rust:hover{background:var(--rust-dark)}
+.btn.light{background:transparent;border-color:rgba(255,255,255,.65);color:#fff}
+.btn.light:hover{background:rgba(255,255,255,.12)}
+.btn.small{padding:8px 16px;min-height:40px;font-size:14px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--mint);color:var(--green);border:1px solid #c3dcc9}
+.tag.rust{background:#f7e7dc;color:var(--rust-dark);border-color:#eccdb8}
+.tag.line{background:#fff;border-color:var(--line);color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm)}
+.muted{color:var(--muted)}
+.small{font-size:13.5px}
+section.blk{padding:56px 0}
+.sec-head{max-width:720px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(26px,3.4vw,36px);margin:10px 0 8px}
+.sec-head p{margin:0;color:var(--muted);font-size:16.5px}
+
+/* single disclaimer, removed for live use */
+.notice{background:var(--green-deep);color:#dcebe0;font-size:13.5px;padding:9px 0}
+.notice .wrap{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.notice strong{color:#f2c14e;font-weight:700;white-space:nowrap}
+
+/* header / view switch */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:14px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--green);font-size:19px;margin-right:auto;text-decoration:none}
+.brand img{width:42px;height:42px;border-radius:10px;object-fit:cover;border:1px solid var(--line)}
+.viewswitch{display:flex;background:var(--mint2);border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px}
+.viewswitch button{border:none;background:transparent;border-radius:999px;padding:9px 18px;font-weight:700;cursor:pointer;font-size:14.5px;color:var(--green);min-height:40px}
+.viewswitch button[aria-selected="true"]{background:var(--green);color:#fff}
+.screen{display:none}
+.screen.active{display:block}
+
+/* hero */
+.hero{padding:54px 0 10px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(34px,4.6vw,54px);margin:14px 0 16px}
+.hero h1 em{font-style:normal;color:var(--rust)}
+.lead{font-size:18.5px;color:#36493f;max-width:600px;margin:0}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero-panel{background:var(--green);border-radius:20px;padding:28px;color:#e3efe6;box-shadow:var(--shadow)}
+.hero-panel h3{color:#fff;font-size:20px;margin:0 0 14px}
+.hero-panel ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
+.hero-panel li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;gap:12px;align-items:baseline}
+.hero-panel li:last-child{border-bottom:none}
+.hero-panel li b{color:#fff;white-space:nowrap}
+.hero-panel li span{font-size:14.5px;color:#cfe2d4}
+.audience{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.audience span{font-size:13px;font-weight:700;color:var(--green);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+
+/* capabilities */
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cap h3{margin:10px 0 6px;font-size:19.5px}
+.cap p{margin:0;color:var(--muted);font-size:15px}
+.cap .num{font-family:Georgia,serif;font-size:15px;font-weight:700;color:var(--rust-dark);letter-spacing:.06em}
+.cap{border-top:3px solid var(--green)}
+.cap:nth-child(3n+2){border-top-color:var(--gold)}
+.cap:nth-child(3n){border-top-color:var(--rust)}
+.cap{cursor:pointer}
+.cap:focus-visible{outline:3px solid var(--green2);outline-offset:3px}
+.cap-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:14px;font-weight:800;color:var(--green);text-decoration:underline;text-underline-offset:3px;min-height:32px}
+.cap:hover .cap-link{color:var(--rust-dark)}
+
+/* how it works */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+.flowstep{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.flowstep .n{width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.flowstep h3{font-size:17.5px;margin:0 0 6px}
+.flowstep p{margin:0;font-size:14.5px;color:var(--muted)}
+
+/* routes */
+.routes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.route-card{background:var(--green);color:#e3efe6;border-radius:18px;padding:26px}
+.route-card h3{color:#fff;margin:10px 0 8px;font-size:21px}
+.route-card p{margin:0;font-size:15px;color:#cfe2d4}
+.route-card.alt{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.route-card.alt h3{color:var(--green)}
+.route-card.alt p{color:var(--muted)}
+
+/* services split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.split .card h3{margin:0 0 6px;font-size:21px}
+.split ul{margin:12px 0 0;padding-left:18px;color:#36493f;font-size:15px}
+.split li{margin-bottom:7px}
+.split li::marker{color:var(--rust)}
+
+/* founder + partner */
+.founder{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.quote{font-family:Georgia,serif;font-size:21px;color:var(--green);line-height:1.45;margin:0}
+form.partner{display:grid;gap:12px}
+form.partner label{font-weight:700;font-size:14px;color:var(--green);display:block;margin-bottom:5px}
+form.partner input,form.partner select,form.partner textarea{width:100%;border:1px solid #b9cdc0;border-radius:10px;padding:11px 13px;background:#fff;min-height:46px}
+form.partner textarea{min-height:84px;resize:vertical}
+.form-ok{background:var(--mint);border:1.5px solid var(--green2);border-radius:12px;padding:16px 18px;display:none}
+.form-ok.show{display:block}
+
+footer.site{background:var(--green-deep);color:#bcd4c2;padding:26px 0;font-size:14px;margin-top:0}
+footer.site .wrap{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+footer.site strong{color:#fff}
+
+/* ============ business experience ============ */
+.biz-head{padding:34px 0 6px}
+.biz-head h2{font-size:clamp(27px,3.6vw,38px);margin:10px 0 6px}
+.biz-head p{margin:0;color:var(--muted);max-width:680px;font-size:16.5px}
+.modules{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 4px}
+.modules a{font-size:13.5px;font-weight:700;text-decoration:none;color:var(--green);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px;min-height:40px;display:inline-flex;align-items:center}
+.modules a:hover{background:var(--mint)}
+.dash{display:grid;grid-template-columns:224px minmax(0,1fr);border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--shadow);margin:18px 0 8px}
+.sidebar{background:var(--green-deep);color:#cfe8d6;padding:22px 16px}
+.sidebar .store{color:#fff;font-weight:800;font-size:16.5px;line-height:1.3}
+.sidebar .loc{font-size:13px;color:#9fc4ab;margin-top:2px}
+.sidebar nav{display:flex;flex-direction:column;gap:3px;margin-top:18px}
+.sidebar nav a{color:#cfe8d6;text-decoration:none;padding:10px 12px;border-radius:10px;font-size:14px;min-height:42px;display:flex;align-items:center}
+.sidebar nav a.on{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
+.sidebar .note{margin-top:20px;font-size:13px;color:#9fc4ab;line-height:1.5}
+.dashmain{padding:24px;background:#fcfdfc;min-width:0}
+.dashmain h3{font-size:21px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.kpi .lbl{font-size:13px;color:var(--muted);font-weight:600}
+.kpi b{font-size:27px;color:var(--green);display:block;font-family:Georgia,serif;line-height:1.25}
+.kpi .sub{font-size:13px;color:var(--muted)}
+.alertrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+.alertrow .info{flex:1 1 280px;min-width:0}
+.alertrow .info strong{color:var(--green);font-size:16px}
+.alertrow .meta{font-size:13.5px;color:var(--muted);margin-top:2px}
+.alertrow .acts{display:flex;gap:8px;flex-wrap:wrap}
+.routebox{border:1.5px solid var(--green);border-radius:16px;padding:24px;background:#fff;margin-top:16px}
+.routebox.hidden{display:none}
+.routebox h3{margin:8px 0 6px;font-size:22px}
+.factors{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+.factor{background:var(--mint2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.factor .fl{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.factor .fv{font-size:19px;font-weight:800;color:var(--green);margin-top:3px}
+.factor .fs{font-size:13px;color:var(--muted)}
+.rangebar{margin:18px 0 6px}
+.rangebar .track{position:relative;height:14px;border-radius:999px;background:linear-gradient(90deg,#dcebe0,#f3e3d3)}
+.rangebar .band{position:absolute;top:0;height:14px;border-radius:999px;background:var(--rust);opacity:.85}
+.rangebar .marker{position:absolute;top:-5px;width:3px;height:24px;background:var(--green);border-radius:2px}
+.range-labels{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);flex-wrap:wrap;gap:4px 12px}
+.pricebands{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.band-card{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff}
+.band-card.rec{border:1.5px solid var(--green);background:var(--mint2)}
+.band-card .bp{font-size:24px;font-weight:800;color:var(--green);font-family:Georgia,serif}
+.band-card ul{margin:8px 0 12px;padding-left:17px;font-size:14px;color:#36493f}
+.band-card li{margin-bottom:4px}
+.labeldone{background:var(--mint);border:1.5px solid var(--green2);border-radius:12px;padding:18px;margin-top:16px}
+.labeldone[hidden]{display:none}
+.shelflabel{background:#fff;border:2px solid var(--green);border-radius:10px;padding:14px 18px;max-width:340px;margin-top:12px;text-align:center}
+.shelflabel .sl-name{font-weight:800;color:var(--green);font-size:15px}
+.shelflabel .sl-price{font-family:Georgia,serif;font-size:36px;font-weight:700;color:var(--rust-dark);line-height:1.1}
+.shelflabel .sl-was{font-size:13px;color:var(--muted);text-decoration:line-through}
+.orgs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.org{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff}
+.org strong{color:var(--green)}
+.org ul{margin:8px 0 12px;padding-left:17px;font-size:14px;color:#36493f}
+.org li{margin-bottom:3px}
+.org .match{color:var(--rust-dark);font-weight:700}
+.ladder{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0;font-weight:700;font-size:14.5px;color:var(--green)}
+.ladder span{background:var(--mint);border:1px solid #c3dcc9;border-radius:999px;padding:7px 14px}
+.ladder i{font-style:normal;color:var(--muted)}
+.collectors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.taskitem{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:10px 0;font-size:14.5px}
+.taskitem:last-child{border-bottom:none}
+.status{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--mint);color:var(--green);border:1px solid #c3dcc9;white-space:nowrap}
+.status.grey{background:#f0f0ee;color:#555;border-color:#ddd}
+select.fluid{width:100%;border:1px solid #b9cdc0;border-radius:10px;padding:10px 12px;background:#fff}
+label.flabel{font-weight:700;font-size:14px;display:block;margin:12px 0 6px;color:var(--green)}
+label.flabel:first-of-type{margin-top:0}
+.toast{background:var(--green);color:#fff;border-radius:12px;padding:14px 16px;margin-top:12px;display:none;font-size:14.5px}
+.toast.show{display:block}
+
+/* guided tour additions */
+.mainnav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0;padding:10px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.mainnav a{font-size:13.5px;font-weight:700;text-decoration:none;color:var(--green);background:var(--mint2);border:1px solid var(--line);border-radius:999px;padding:9px 15px;min-height:44px;display:inline-flex;align-items:center}
+.mainnav a:hover,.mainnav a:focus{background:var(--mint)}
+.spotlight{border:2px solid var(--rust);background:#fff8f1;border-radius:16px;padding:22px;margin:18px 0;display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.spotlight .sp-info{flex:1 1 300px;min-width:0}
+.spotlight .sp-title{font-size:19px;font-weight:800;color:var(--green)}
+.spotlight .sp-meta{font-size:15px;color:#36493f;margin-top:4px}
+.illus{font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--rust-dark)}
+details.moreexamples{margin-top:8px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:6px 18px}
+details.moreexamples summary{cursor:pointer;font-weight:800;color:var(--green);padding:14px 0;min-height:44px}
+.tourstep-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.backlink{font-size:13.5px;font-weight:700;color:var(--green);text-decoration:underline;text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}
+.chartwrap{margin:16px 0;background:var(--mint2);border:1px solid var(--line);border-radius:12px;padding:16px}
+.chartwrap svg{width:100%;height:auto;display:block}
+.priceopts{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.priceopts button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;font-weight:800;color:var(--green);cursor:pointer;min-height:44px}
+.priceopts button[aria-pressed="true"]{background:var(--green);color:#fff;border-color:var(--green)}
+.priceopts button.rec{border-color:var(--rust)}
+.customprice{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}
+.customprice input{width:130px;border:1px solid #b9cdc0;border-radius:10px;padding:10px 12px;min-height:44px}
+.marginbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0;font-size:15px}
+details.howcalc{margin:12px 0;border:1px solid var(--line);border-radius:12px;padding:4px 16px;background:#fff}
+details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);padding:12px 0;min-height:44px}
+.cartbox{border:1.5px solid var(--green);border-radius:14px;padding:18px;background:var(--mint2);margin-top:16px}
+.cartrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:10px 0;font-size:14.5px}
+.cartrow:last-of-type{border-bottom:none}
+.cartrow input{width:72px;border:1px solid #b9cdc0;border-radius:8px;padding:8px;min-height:40px}
+.qtyctl{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.form-note{background:var(--mint);border:1px solid var(--green2);border-radius:12px;padding:14px 16px;display:none;font-size:14.5px}
+.form-note.show{display:block}
+
+/* ============ left vertical navigation, tabbed panels (Nov 11) ============ */
+.biz-layout{display:grid;grid-template-columns:232px minmax(0,1fr);gap:18px;align-items:start;margin:18px 0 8px}
+.biznav{position:sticky;top:76px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:var(--shadow-sm)}
+.biznav .biznav-title{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:6px 10px 10px}
+.biznav a{display:flex;align-items:center;min-height:46px;padding:10px 12px;border-radius:10px;font-size:14.5px;font-weight:700;text-decoration:none;color:var(--green)}
+.biznav a:hover{background:var(--mint)}
+.biznav a[aria-current="true"]{background:var(--green);color:#fff}
+.biz-panel{display:none}
+.biz-panel.active{display:block}
+.biz-panel .routebox{margin-top:0}
+.biz-panel .card{margin-top:0}
+@media(max-width:860px){
+  .biz-layout{grid-template-columns:1fr}
+  .biznav{position:static;display:flex;flex-wrap:wrap;gap:6px}
+  .biznav .biznav-title{width:100%;padding-bottom:4px}
+  .biznav a{min-height:42px;padding:8px 12px;background:var(--mint2);border:1px solid var(--line);border-radius:999px}
+  .biznav a[aria-current="true"]{background:var(--green);color:#fff}
+}
+@media print{
+  body>*{display:none!important}
+  #printLabelArea{display:block!important;position:static!important}
+}
+#printLabelArea{display:none}
+@media(max-width:960px){
+  .caps,.routes{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .orgs{grid-template-columns:1fr}
+  .factors{grid-template-columns:1fr 1fr}
+  .kpis{grid-template-columns:1fr 1fr}
+}
+@media(max-width:820px){
+  .hero-grid,.split,.founder-grid,.grid2,.pricebands,.collectors{grid-template-columns:1fr}
+  .dash{grid-template-columns:1fr}
+  .sidebar nav{flex-direction:row;flex-wrap:wrap}
+  .sidebar .note{display:none}
+}
+@media(max-width:560px){
+  .caps,.routes,.flow{grid-template-columns:1fr}
+  .factors{grid-template-columns:1fr}
+  .wrap{padding:0 18px}
+  section.blk{padding:40px 0}
+  .dashmain{padding:18px}
+  .routebox{padding:18px}
+  .viewswitch{width:100%}
+  .viewswitch button{flex:1}
+  .brand{margin-right:0}
+}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+
+</style></head><body><header><div class="wrap nav">
+<a class="brand" href="../"><img src="../logo.png" alt="Save4Good logo">Save4Good</a>
+<nav class="navlinks"><a href="../">Home</a><a href="../families/">For Families</a><a href="../businesses/">For Businesses</a><a href="../business-experience/">Business Experience</a><a href="../our-story/">Our Story</a></nav>
+<div><a class="btn light" href="../families/">For Families</a> <a class="btn solid" href="../businesses/">For Businesses</a></div>
+</div></header>
+<main id="screen-fam">
+  <div class="wrap biz-head">
+    <span class="tag">Families Experience</span>
+    <h2>See what your family will find on Save4Good.</h2>
+    <p class="small muted" style="margin:0">This page shows what a family will see on their end, using examples from the Families page. Nothing here is live yet, and no item is a confirmed offer.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="biz-layout">
+      <nav class="biznav" aria-label="Families workspace, main navigation">
+        <div class="biznav-title">Families Experience</div>
+        <a href="#fam-overview" data-panel="overview" aria-current="true">Overview</a>
+        <a href="#fam-groceries" data-panel="groceries" aria-current="false">Groceries</a>
+        <a href="#fam-meals" data-panel="meals" aria-current="false">Prepared Meals</a>
+        <a href="#fam-pharmacies" data-panel="pharmacies" aria-current="false">Pharmacies</a>
+        <a href="#fam-community" data-panel="community" aria-current="false">Community Needs</a>
+        <a href="#fam-wantlist" data-panel="wantlist" aria-current="false">My Want List</a>
+      </nav>
+      <div class="dashmain">
+        <section class="biz-panel active" id="panel-overview" aria-label="Overview">
+        <div id="fam-overview">
+        <p class="small muted" style="margin:0 0 6px"><strong style="color:var(--green)">Example family</strong> &middot; One guided example, using the rice example from the Business Experience.</p>
+        <h3 style="margin:6px 0 8px">Your Want List, your exact items, your pickup window.</h3>
+        <p class="small muted" style="margin:0;max-width:680px"><span class="illus">Guided example</span>, this is an example of what a family will see. It is not a live offer, and no item is confirmed.</p>
+        <div class="spotlight" style="margin-top:16px">
+          <div class="sp-info">
+            <span class="illus">Guided example &middot; One item</span>
+            <div class="sp-title">Long grain rice, 2 lb | Was $3.49 | Now $2.49</div>
+            <div class="sp-meta">Example test price from the Business Experience. Exact item and price, shown before you claim it.</div>
+          </div>
+          <button class="btn rust" data-goto-panel="wantlist" style="font-size:16px;padding:14px 26px">Save it to My Want List</button>
+        </div>
+        <div class="flow" style="grid-template-columns:repeat(4,1fr)">
+          <div class="flowstep"><div class="n">1</div><h3>Save it</h3><p>Save the products your family buys to your Want List.</p></div>
+          <div class="flowstep"><div class="n">2</div><h3>See exact items</h3><p>See exact items and prices, and matching availability.</p></div>
+          <div class="flowstep"><div class="n">3</div><h3>Claim and pay</h3><p>Claim what you want and pay in one flow.</p></div>
+          <div class="flowstep"><div class="n">4</div><h3>Collect it</h3><p>Collect it during an available pickup window.</p></div>
+        </div>
+        <p class="small muted" style="margin:16px 0 0">What happens next: your Want List shows matching availability when a participating business makes the item available, and you choose an available pickup window. Nothing is claimed or paid automatically.</p>
+        <p style="margin:14px 0 0;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn solid small" data-goto-panel="groceries">See Groceries</button>
+          <button class="btn small" data-goto-panel="meals">See Prepared Meals</button>
+          <button class="btn small" data-goto-panel="community">See Community Needs</button>
+        </p>
+        </div>
+        </section>
+
+        <section class="biz-panel" id="panel-groceries" aria-label="Groceries">
+        <div class="routebox" id="fam-groceries">
+          <div class="tourstep-head"><span class="tag">Groceries</span><a class="backlink" href="#fam-overview">Back to overview</a></div>
+          <h3>Groceries and Everyday Essentials</h3>
+          <p class="muted" style="margin:0;max-width:680px">Your list. Your budget. Your dinner. Finally connected.</p>
+          <ul style="margin:14px 0 0;padding-left:20px;color:#36493f">
+            <li>Save the products your family buys</li>
+            <li>Discover matching availability</li>
+            <li>See exact items and prices</li>
+            <li>Build a dinner for under $20</li>
+            <li>Find recipe ideas from what is already in your fridge, with Fridge Rescue</li>
+            <li>Shop high protein, verified halal or vegetarian options</li>
+            <li>Turn recipes into an ingredient list</li>
+            <li>Explore groceries with SNAP and WIC shopping discovery</li>
+          </ul>
+          <h4 style="color:var(--green);margin:18px 0 4px;font-size:17px">Four meal journeys</h4>
+          <details style="margin:8px 0"><summary>Dinner Under $20</summary><p>Set a dinner budget, explore recipes, and add needed ingredients to a ready to shop list. Recipes connect to missing ingredients and actual available offers.</p></details>
+          <details style="margin:8px 0"><summary>Cook From My Fridge: Fridge Rescue</summary><p>Start with what is already at home. Get meal ideas and shop only for what is missing.</p></details>
+          <details style="margin:8px 0"><summary>High Protein or Family Favorites</summary><p>Choose high protein, verified halal or vegetarian options, discover recipes, and connect ingredients with available products.</p></details>
+          <details style="margin:8px 0"><summary>Ready After Work</summary><p>Explore hot bar meals and prepared foods, see exact prices, and choose an available pickup option.</p></details>
+          <p style="margin:16px 0 0"><button class="btn solid small" data-addwant="Long grain rice, 2 lb">Save rice to My Want List</button></p>
+          <div class="toast" id="groceriesToast" role="status">Saved to this guided example: Long grain rice, 2 lb. See it in My Want List.</div>
+        </div>
+        </section>
+
+        <section class="biz-panel" id="panel-meals" aria-label="Prepared Meals">
+        <div class="routebox" id="fam-meals">
+          <div class="tourstep-head"><span class="tag rust">Prepared Meals</span><a class="backlink" href="#fam-overview">Back to overview</a></div>
+          <h3>Prepared Meals</h3>
+          <p class="muted" style="margin:0;max-width:680px">After a long shift, dinner should be one less thing to worry about. Discover grocery hot bar meals, prepared foods and restaurant options with exact prices.</p>
+          <div class="card" style="margin-top:16px;box-shadow:none"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80" alt="Grocery hot bar dinner in a takeout container" style="border-radius:14px;width:100%;height:200px;object-fit:cover">
+          <h3 style="margin-top:12px">Grocery hot bar dinner</h3><p>Chicken, vegetables and rice</p><p><b>$6.50</b></p><p style="color:var(--muted);font-size:13px">Illustrative offer. Example only.</p><p>Claim &middot; Pay &middot; Choose pickup</p>
+          <p style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn solid small" id="claimMealBtn" type="button">Claim this meal</button></p>
+          <div class="toast" id="mealToast" role="status">Claimed in this guided example: grocery hot bar dinner, chicken, vegetables and rice, $6.50. Next, pay and choose an available pickup window. Holds of up to 24 hours apply only where participating retailers support them.</div>
+          </div>
+          <ul style="margin:14px 0 0;padding-left:20px;color:#36493f">
+            <li>Claim what you want, pay, and collect it during an available pickup window</li>
+            <li>Holds of up to 24 hours where participating retailers support them</li>
+          </ul>
+        </div>
+        </section>
+
+        <section class="biz-panel" id="panel-pharmacies" aria-label="Pharmacies">
+        <div class="routebox" id="fam-pharmacies">
+          <div class="tourstep-head"><span class="tag">Pharmacies</span><a class="backlink" href="#fam-overview">Back to overview</a></div>
+          <h3>Pharmacies and Neighborhood Markets</h3>
+          <p class="muted" style="margin:0;max-width:680px">More than a quick stop. More of what your household needs.</p>
+          <ul style="margin:14px 0 0;padding-left:20px;color:#36493f">
+            <li>Nonprescription everyday essentials from participating neighborhood retailers</li>
+            <li>Personal care, baby products, cleaning supplies, paper goods, snacks, juices, other beverages and pet supplies</li>
+            <li>Find exact items and prices without another trip from store to store</li>
+            <li>Nonprescription everyday essentials only</li>
+          </ul>
+        </div>
+        </section>
+
+        <section class="biz-panel" id="panel-community" aria-label="Community Needs">
+        <div class="routebox" id="fam-community">
+          <div class="tourstep-head"><span class="tag">Community Needs</span><a class="backlink" href="#fam-overview">Back to overview</a></div>
+          <h3>Community Needs and Giving</h3>
+          <p class="muted" style="margin:0;max-width:680px">Give what someone actually needs. Verified wishlists show exact requested items, so people can select exact requested items, support purchases or donations, and help resources reach the people who can truly use them.</p>
+          <div class="three" style="margin-top:16px">
+            <div class="card" style="box-shadow:none"><h3>Senior homes</h3><p>Dietary grocery requests</p><p><button class="btn small" data-viewlist="Senior homes: dietary grocery requests">View requested items</button></p></div>
+            <div class="card" style="box-shadow:none"><h3>Family support</h3><p>Diapers and personal care</p><p><button class="btn small" data-viewlist="Family support: diapers and personal care">View requested items</button></p></div>
+            <div class="card" style="box-shadow:none"><h3>Community pantry</h3><p>Specific shelf stable foods</p><p><button class="btn small" data-viewlist="Community pantry: specific shelf stable foods">View requested items</button></p></div>
+          </div>
+          <div class="toast" id="communityToast" role="status"></div>
+          <p class="small muted" style="margin:14px 0 0">Verified organization and senior homes wishlists show exact requested items, with donation choices and needs based purchasing with documented handoffs.</p>
+        </div>
+        </section>
+
+        <section class="biz-panel" id="panel-wantlist" aria-label="My Want List">
+        <div class="routebox" id="fam-wantlist">
+          <div class="tourstep-head"><span class="tag">My Want List</span><a class="backlink" href="#fam-overview">Back to overview</a></div>
+          <h3>My Want List</h3>
+          <p class="muted" style="margin:0;max-width:680px">A Want List should do more than remember. It connects what families are hoping to buy with offers participating businesses choose to make available.</p>
+          <ul style="margin:14px 0 0;padding-left:20px;color:#36493f">
+            <li>Save the products your family buys</li>
+            <li>See matching availability when a participating business makes the item available</li>
+            <li>See exact items and prices</li>
+            <li>Claim, pay and pickup in one flow</li>
+          </ul>
+          <div class="cartbox" id="wantListBox">
+            <h4 style="color:var(--green);margin:0 0 6px;font-size:18px">Your Want List, guided example</h4>
+            <p class="small muted" id="wantEmpty" style="margin:0">Your example Want List is empty. Save the rice from the Overview or Groceries example to see it here.</p>
+            <div id="wantRows"></div>
+            <p class="small" style="margin:10px 0 0"><strong id="wantTotal">Total: 0 saved items</strong></p>
+          </div>
+          <p style="margin:14px 0 0"><button class="btn solid small" data-addwant="Long grain rice, 2 lb, $2.49">Save rice, $2.49</button> <button class="btn small" data-addwant="Grocery hot bar dinner, $6.50">Save hot bar dinner, $6.50</button></p>
+          <p class="small muted" style="margin:14px 0 0">With permission based, aggregated demand signals, merchants can see what customers are looking for and make better inventory decisions. No individual household need is shared with a business.</p>
+        </div>
+        </section>
+      </div>
+    </div>
+    <p style="margin:20px 0 4px;display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn small" href="../">Back to Homepage</a> <a class="btn small" href="../families/">Back to Families</a>
+      <a class="btn rust small" href="../businesses/#partnership">Connect With Save4Good</a>
+    </p>
+  </div>
+</main>
+<footer><div class="wrap"><span>Save4Good | Connected infrastructure for people, businesses, and the planet.</span><span>Sources: <a href="https://refed.org/" target="_blank" rel="noopener">ReFED</a>, <a href="https://www.unep.org/" target="_blank" rel="noopener">UNEP</a>, <a href="https://www.usda.gov/" target="_blank" rel="noopener">USDA</a>.</span></div></footer>
+<script>
+(function(){
+  var PANELS = ['overview','groceries','meals','pharmacies','community','wantlist'];
+  var PANEL_BY_ID = {'fam-overview':'overview','fam-groceries':'groceries','fam-meals':'meals','fam-pharmacies':'pharmacies','fam-community':'community','fam-wantlist':'wantlist'};
+  function showPanel(name, scroll){
+    if(PANELS.indexOf(name)===-1) name='overview';
+    PANELS.forEach(function(n){
+      var p=document.getElementById('panel-'+n);
+      if(p) p.classList.toggle('active', n===name);
+    });
+    document.querySelectorAll('.biznav a[data-panel]').forEach(function(a){
+      a.setAttribute('aria-current', a.getAttribute('data-panel')===name ? 'true' : 'false');
+    });
+    if(scroll!==false){
+      var layout=document.querySelector('.biz-layout');
+      if(layout) layout.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  }
+  document.querySelectorAll('.biznav a[data-panel]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();showPanel(a.getAttribute('data-panel'));});
+  });
+  document.querySelectorAll('[data-goto-panel]').forEach(function(b){
+    b.addEventListener('click',function(){showPanel(b.getAttribute('data-goto-panel'));});
+  });
+  document.querySelectorAll('a[href="#fam-overview"]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();showPanel('overview');});
+  });
+  document.querySelectorAll('a[href="#fam-groceries"],a[href="#fam-meals"],a[href="#fam-pharmacies"],a[href="#fam-community"],a[href="#fam-wantlist"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      showPanel(PANEL_BY_ID[a.getAttribute('href').slice(1)]||'overview');
+    });
+  });
+  var want=[];
+  function renderWant(){
+    var rows=document.getElementById('wantRows'); rows.innerHTML='';
+    want.forEach(function(item){
+      var row=document.createElement('div'); row.className='cartrow';
+      var label=document.createElement('span'); label.textContent=item;
+      var rm=document.createElement('button'); rm.type='button'; rm.className='btn small'; rm.textContent='Remove';
+      rm.addEventListener('click',function(){want=want.filter(function(w){return w!==item;}); renderWant();});
+      row.appendChild(label); row.appendChild(rm); rows.appendChild(row);
+    });
+    document.getElementById('wantEmpty').style.display=want.length?'none':'block';
+    document.getElementById('wantTotal').textContent='Total: '+want.length+' saved item'+(want.length===1?'':'s');
+  }
+  document.querySelectorAll('[data-addwant]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var item=b.getAttribute('data-addwant');
+      if(want.indexOf(item)===-1) want.push(item);
+      renderWant();
+      var t=document.getElementById('groceriesToast');
+      if(t) t.classList.add('show');
+    });
+  });
+  renderWant();
+  document.getElementById('claimMealBtn').addEventListener('click',function(){
+    document.getElementById('mealToast').classList.add('show');
+  });
+  document.querySelectorAll('[data-viewlist]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=document.getElementById('communityToast');
+      t.textContent='Example requested items: '+b.getAttribute('data-viewlist')+'. This is an example wishlist view, not a live list.';
+      t.classList.add('show');
+    });
+  });
+})();
+</script>
+</body></html>
