@@ -1,0 +1,716 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Save4Good: Business Experience</title><meta name="description" content="See how Save4Good connects sales, demand, operations and recovery."><style>
+
+:root{--green:#0b3d2e;--green2:#0f6b4f;--mint:#e6f2e8;--cream:#fdf7ec;--ink:#14231d;--muted:#5b6d64;--rust:#c0653a;--line:#dde7df}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;color:var(--green)}
+.brand img{width:42px;height:42px;border-radius:10px}
+.navlinks{display:flex;gap:20px;color:#33473e;font-size:14px;flex-wrap:wrap}
+.btn{display:inline-block;border:1px solid var(--green);border-radius:999px;padding:10px 18px;font-weight:700;font-size:14px;white-space:nowrap}
+.btn.solid{background:var(--green);color:#fff}.btn.light{background:#fff;color:var(--green)}
+.hero{background:var(--cream);padding:36px 0 28px}
+.eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--rust);font-weight:800;font-size:12px}
+h1{font-size:52px;line-height:1.05;margin:10px 0 14px;color:var(--green)}h1 span{color:var(--rust)}
+h2{font-size:32px;line-height:1.15;color:var(--green);margin:0 0 10px}
+.lead{font-size:17px;color:#33473e;max-width:680px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 10px 26px rgba(11,61,46,.10)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+section{padding:32px 0}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:18px;padding:28px 0;border-bottom:1px solid var(--line)}
+.stats b{font-size:30px;color:var(--green);display:block}.stats small{color:var(--muted)}
+.tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.photocard{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.photocard img{width:100%;height:220px;object-fit:cover}.photocard .body{padding:20px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.steps div{background:#f4f8f5;border-radius:12px;padding:11px;font-size:13px}
+.final{background:var(--green);color:#fff;padding:44px 0}.final h2{color:#fff;font-size:38px}
+.final .btn.solid{background:#fff;color:var(--green);border-color:#fff}.final .btn.light{background:transparent;color:#fff;border-color:#fff}
+footer{background:var(--green);color:#cfe8d6;padding:16px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+details{border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0;background:#fff}
+details summary{font-weight:800;color:var(--green);cursor:pointer}
+@media(max-width:860px){h1{font-size:36px}.two,.three,.steps{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+
+
+:root{
+  --green:#0b3d2e; --green2:#14604a; --green-deep:#06231a;
+  --cream:#fbf6ec; --mint:#e9f2ec; --mint2:#f3f7f3;
+  --rust:#b95c33; --rust-dark:#8f4525;
+  --ink:#17251f; --muted:#5d6f66; --line:#dfe8e1; --gold:#c9a227;
+  --bg:#fbf6ec; --surface:#ffffff;
+  --shadow:0 14px 34px rgba(11,61,46,.09);
+  --shadow-sm:0 4px 14px rgba(11,61,46,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;color:var(--green);line-height:1.18;font-weight:700}
+a{color:inherit}
+img{max-width:100%}
+button,select,input,textarea{font:inherit;min-height:44px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--green);border-radius:999px;padding:12px 22px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;background:#fff;color:var(--green);transition:background .15s ease,color .15s ease}
+.btn:hover{background:var(--mint)}
+.btn.solid{background:var(--green);color:#fff}
+.btn.solid:hover{background:var(--green2)}
+.btn.rust{background:var(--rust);border-color:var(--rust);color:#fff}
+.btn.rust:hover{background:var(--rust-dark)}
+.btn.light{background:transparent;border-color:rgba(255,255,255,.65);color:#fff}
+.btn.light:hover{background:rgba(255,255,255,.12)}
+.btn.small{padding:8px 16px;min-height:40px;font-size:14px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--mint);color:var(--green);border:1px solid #c3dcc9}
+.tag.rust{background:#f7e7dc;color:var(--rust-dark);border-color:#eccdb8}
+.tag.line{background:#fff;border-color:var(--line);color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm)}
+.muted{color:var(--muted)}
+.small{font-size:13.5px}
+section.blk{padding:56px 0}
+.sec-head{max-width:720px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(26px,3.4vw,36px);margin:10px 0 8px}
+.sec-head p{margin:0;color:var(--muted);font-size:16.5px}
+
+/* single disclaimer, removed for live use */
+.notice{background:var(--green-deep);color:#dcebe0;font-size:13.5px;padding:9px 0}
+.notice .wrap{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.notice strong{color:#f2c14e;font-weight:700;white-space:nowrap}
+
+/* header / view switch */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:14px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--green);font-size:19px;margin-right:auto;text-decoration:none}
+.brand img{width:42px;height:42px;border-radius:10px;object-fit:cover;border:1px solid var(--line)}
+.viewswitch{display:flex;background:var(--mint2);border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px}
+.viewswitch button{border:none;background:transparent;border-radius:999px;padding:9px 18px;font-weight:700;cursor:pointer;font-size:14.5px;color:var(--green);min-height:40px}
+.viewswitch button[aria-selected="true"]{background:var(--green);color:#fff}
+.screen{display:none}
+.screen.active{display:block}
+
+/* hero */
+.hero{padding:54px 0 10px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(34px,4.6vw,54px);margin:14px 0 16px}
+.hero h1 em{font-style:normal;color:var(--rust)}
+.lead{font-size:18.5px;color:#36493f;max-width:600px;margin:0}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero-panel{background:var(--green);border-radius:20px;padding:28px;color:#e3efe6;box-shadow:var(--shadow)}
+.hero-panel h3{color:#fff;font-size:20px;margin:0 0 14px}
+.hero-panel ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
+.hero-panel li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;gap:12px;align-items:baseline}
+.hero-panel li:last-child{border-bottom:none}
+.hero-panel li b{color:#fff;white-space:nowrap}
+.hero-panel li span{font-size:14.5px;color:#cfe2d4}
+.audience{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.audience span{font-size:13px;font-weight:700;color:var(--green);background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+
+/* capabilities */
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cap h3{margin:10px 0 6px;font-size:19.5px}
+.cap p{margin:0;color:var(--muted);font-size:15px}
+.cap .num{font-family:Georgia,serif;font-size:15px;font-weight:700;color:var(--rust-dark);letter-spacing:.06em}
+.cap{border-top:3px solid var(--green)}
+.cap:nth-child(3n+2){border-top-color:var(--gold)}
+.cap:nth-child(3n){border-top-color:var(--rust)}
+.cap{cursor:pointer}
+.cap:focus-visible{outline:3px solid var(--green2);outline-offset:3px}
+.cap-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:14px;font-weight:800;color:var(--green);text-decoration:underline;text-underline-offset:3px;min-height:32px}
+.cap:hover .cap-link{color:var(--rust-dark)}
+
+/* how it works */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+.flowstep{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.flowstep .n{width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.flowstep h3{font-size:17.5px;margin:0 0 6px}
+.flowstep p{margin:0;font-size:14.5px;color:var(--muted)}
+
+/* routes */
+.routes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.route-card{background:var(--green);color:#e3efe6;border-radius:18px;padding:26px}
+.route-card h3{color:#fff;margin:10px 0 8px;font-size:21px}
+.route-card p{margin:0;font-size:15px;color:#cfe2d4}
+.route-card.alt{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.route-card.alt h3{color:var(--green)}
+.route-card.alt p{color:var(--muted)}
+
+/* services split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.split .card h3{margin:0 0 6px;font-size:21px}
+.split ul{margin:12px 0 0;padding-left:18px;color:#36493f;font-size:15px}
+.split li{margin-bottom:7px}
+.split li::marker{color:var(--rust)}
+
+/* founder + partner */
+.founder{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+.quote{font-family:Georgia,serif;font-size:21px;color:var(--green);line-height:1.45;margin:0}
+form.partner{display:grid;gap:12px}
+form.partner label{font-weight:700;font-size:14px;color:var(--green);display:block;margin-bottom:5px}
+form.partner input,form.partner select,form.partner textarea{width:100%;border:1px solid #b9cdc0;border-radius:10px;padding:11px 13px;background:#fff;min-height:46px}
+form.partner textarea{min-height:84px;resize:vertical}
+.form-ok{background:var(--mint);border:1.5px solid var(--green2);border-radius:12px;padding:16px 18px;display:none}
+.form-ok.show{display:block}
+
+footer.site{background:var(--green-deep);color:#bcd4c2;padding:26px 0;font-size:14px;margin-top:0}
+footer.site .wrap{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
+footer.site strong{color:#fff}
+
+/* ============ business experience ============ */
+.biz-head{padding:34px 0 6px}
+.biz-head h2{font-size:clamp(27px,3.6vw,38px);margin:10px 0 6px}
+.biz-head p{margin:0;color:var(--muted);max-width:680px;font-size:16.5px}
+.modules{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 4px}
+.modules a{font-size:13.5px;font-weight:700;text-decoration:none;color:var(--green);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px;min-height:40px;display:inline-flex;align-items:center}
+.modules a:hover{background:var(--mint)}
+.dash{display:grid;grid-template-columns:224px minmax(0,1fr);border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--shadow);margin:18px 0 8px}
+.sidebar{background:var(--green-deep);color:#cfe8d6;padding:22px 16px}
+.sidebar .store{color:#fff;font-weight:800;font-size:16.5px;line-height:1.3}
+.sidebar .loc{font-size:13px;color:#9fc4ab;margin-top:2px}
+.sidebar nav{display:flex;flex-direction:column;gap:3px;margin-top:18px}
+.sidebar nav a{color:#cfe8d6;text-decoration:none;padding:10px 12px;border-radius:10px;font-size:14px;min-height:42px;display:flex;align-items:center}
+.sidebar nav a.on{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
+.sidebar .note{margin-top:20px;font-size:13px;color:#9fc4ab;line-height:1.5}
+.dashmain{padding:24px;background:#fcfdfc;min-width:0}
+.dashmain h3{font-size:21px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.kpi .lbl{font-size:13px;color:var(--muted);font-weight:600}
+.kpi b{font-size:27px;color:var(--green);display:block;font-family:Georgia,serif;line-height:1.25}
+.kpi .sub{font-size:13px;color:var(--muted)}
+.alertrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px}
+.alertrow .info{flex:1 1 280px;min-width:0}
+.alertrow .info strong{color:var(--green);font-size:16px}
+.alertrow .meta{font-size:13.5px;color:var(--muted);margin-top:2px}
+.alertrow .acts{display:flex;gap:8px;flex-wrap:wrap}
+.routebox{border:1.5px solid var(--green);border-radius:16px;padding:24px;background:#fff;margin-top:16px}
+.routebox.hidden{display:none}
+.routebox h3{margin:8px 0 6px;font-size:22px}
+.factors{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+.factor{background:var(--mint2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.factor .fl{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.factor .fv{font-size:19px;font-weight:800;color:var(--green);margin-top:3px}
+.factor .fs{font-size:13px;color:var(--muted)}
+.rangebar{margin:18px 0 6px}
+.rangebar .track{position:relative;height:14px;border-radius:999px;background:linear-gradient(90deg,#dcebe0,#f3e3d3)}
+.rangebar .band{position:absolute;top:0;height:14px;border-radius:999px;background:var(--rust);opacity:.85}
+.rangebar .marker{position:absolute;top:-5px;width:3px;height:24px;background:var(--green);border-radius:2px}
+.range-labels{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);flex-wrap:wrap;gap:4px 12px}
+.pricebands{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.band-card{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff}
+.band-card.rec{border:1.5px solid var(--green);background:var(--mint2)}
+.band-card .bp{font-size:24px;font-weight:800;color:var(--green);font-family:Georgia,serif}
+.band-card ul{margin:8px 0 12px;padding-left:17px;font-size:14px;color:#36493f}
+.band-card li{margin-bottom:4px}
+.labeldone{background:var(--mint);border:1.5px solid var(--green2);border-radius:12px;padding:18px;margin-top:16px}
+.labeldone[hidden]{display:none}
+.shelflabel{background:#fff;border:2px solid var(--green);border-radius:10px;padding:14px 18px;max-width:340px;margin-top:12px;text-align:center}
+.shelflabel .sl-name{font-weight:800;color:var(--green);font-size:15px}
+.shelflabel .sl-price{font-family:Georgia,serif;font-size:36px;font-weight:700;color:var(--rust-dark);line-height:1.1}
+.shelflabel .sl-was{font-size:13px;color:var(--muted);text-decoration:line-through}
+.orgs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.org{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff}
+.org strong{color:var(--green)}
+.org ul{margin:8px 0 12px;padding-left:17px;font-size:14px;color:#36493f}
+.org li{margin-bottom:3px}
+.org .match{color:var(--rust-dark);font-weight:700}
+.ladder{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0;font-weight:700;font-size:14.5px;color:var(--green)}
+.ladder span{background:var(--mint);border:1px solid #c3dcc9;border-radius:999px;padding:7px 14px}
+.ladder i{font-style:normal;color:var(--muted)}
+.collectors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.taskitem{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:10px 0;font-size:14.5px}
+.taskitem:last-child{border-bottom:none}
+.status{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--mint);color:var(--green);border:1px solid #c3dcc9;white-space:nowrap}
+.status.grey{background:#f0f0ee;color:#555;border-color:#ddd}
+select.fluid{width:100%;border:1px solid #b9cdc0;border-radius:10px;padding:10px 12px;background:#fff}
+label.flabel{font-weight:700;font-size:14px;display:block;margin:12px 0 6px;color:var(--green)}
+label.flabel:first-of-type{margin-top:0}
+.toast{background:var(--green);color:#fff;border-radius:12px;padding:14px 16px;margin-top:12px;display:none;font-size:14.5px}
+.toast.show{display:block}
+
+/* guided tour additions */
+.mainnav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0;padding:10px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.mainnav a{font-size:13.5px;font-weight:700;text-decoration:none;color:var(--green);background:var(--mint2);border:1px solid var(--line);border-radius:999px;padding:9px 15px;min-height:44px;display:inline-flex;align-items:center}
+.mainnav a:hover,.mainnav a:focus{background:var(--mint)}
+.spotlight{border:2px solid var(--rust);background:#fff8f1;border-radius:16px;padding:22px;margin:18px 0;display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.spotlight .sp-info{flex:1 1 300px;min-width:0}
+.spotlight .sp-title{font-size:19px;font-weight:800;color:var(--green)}
+.spotlight .sp-meta{font-size:15px;color:#36493f;margin-top:4px}
+.illus{font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--rust-dark)}
+details.moreexamples{margin-top:8px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:6px 18px}
+details.moreexamples summary{cursor:pointer;font-weight:800;color:var(--green);padding:14px 0;min-height:44px}
+.tourstep-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.backlink{font-size:13.5px;font-weight:700;color:var(--green);text-decoration:underline;text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}
+.chartwrap{margin:16px 0;background:var(--mint2);border:1px solid var(--line);border-radius:12px;padding:16px}
+.chartwrap svg{width:100%;height:auto;display:block}
+.priceopts{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.priceopts button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;font-weight:800;color:var(--green);cursor:pointer;min-height:44px}
+.priceopts button[aria-pressed="true"]{background:var(--green);color:#fff;border-color:var(--green)}
+.priceopts button.rec{border-color:var(--rust)}
+.customprice{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}
+.customprice input{width:130px;border:1px solid #b9cdc0;border-radius:10px;padding:10px 12px;min-height:44px}
+.marginbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0;font-size:15px}
+details.howcalc{margin:12px 0;border:1px solid var(--line);border-radius:12px;padding:4px 16px;background:#fff}
+details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);padding:12px 0;min-height:44px}
+.cartbox{border:1.5px solid var(--green);border-radius:14px;padding:18px;background:var(--mint2);margin-top:16px}
+.cartrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:10px 0;font-size:14.5px}
+.cartrow:last-of-type{border-bottom:none}
+.cartrow input{width:72px;border:1px solid #b9cdc0;border-radius:8px;padding:8px;min-height:40px}
+.qtyctl{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.form-note{background:var(--mint);border:1px solid var(--green2);border-radius:12px;padding:14px 16px;display:none;font-size:14.5px}
+.form-note.show{display:block}
+@media print{
+  body>*{display:none!important}
+  #printLabelArea{display:block!important;position:static!important}
+}
+#printLabelArea{display:none}
+@media(max-width:960px){
+  .caps,.routes{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .orgs{grid-template-columns:1fr}
+  .factors{grid-template-columns:1fr 1fr}
+  .kpis{grid-template-columns:1fr 1fr}
+}
+@media(max-width:820px){
+  .hero-grid,.split,.founder-grid,.grid2,.pricebands,.collectors{grid-template-columns:1fr}
+  .dash{grid-template-columns:1fr}
+  .sidebar nav{flex-direction:row;flex-wrap:wrap}
+  .sidebar .note{display:none}
+}
+@media(max-width:560px){
+  .caps,.routes,.flow{grid-template-columns:1fr}
+  .factors{grid-template-columns:1fr}
+  .wrap{padding:0 18px}
+  section.blk{padding:40px 0}
+  .dashmain{padding:18px}
+  .routebox{padding:18px}
+  .viewswitch{width:100%}
+  .viewswitch button{flex:1}
+  .brand{margin-right:0}
+}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+
+</style></head><body><header><div class="wrap nav">
+<a class="brand" href="../"><img src="../logo.png" alt="Save4Good logo">Save4Good</a>
+<nav class="navlinks"><a href="../">Home</a><a href="../families/">For Families</a><a href="../businesses/">For Businesses</a><a href="../business-experience/">Business Experience</a><a href="../our-story/">Our Story</a></nav>
+<div><a class="btn light" href="../families/">For Families</a> <a class="btn solid" href="../businesses/">For Businesses</a></div>
+</div></header>
+<main id="screen-biz">
+  <div class="wrap biz-head">
+    <span class="tag">Business Experience</span>
+    <h2>See how Save4Good connects sales, demand, operations and recovery.</h2>
+    <nav class="mainnav" aria-label="Business workspace, main navigation">
+      <a href="#biz-overview">Overview</a>
+      <a href="#route-sell">Inventory &amp; Pricing</a>
+      <a href="#biz-b2b">B2B Bulk</a>
+      <a href="#route-donate">Donations</a>
+      <a href="#route-waste">Waste Lab</a>
+      <a href="#biz-team">Team &amp; Training</a>
+      <a href="#biz-tasks">Reports / Tasks &amp; Results</a>
+    </nav>
+  </div>
+
+  <div class="wrap">
+    <div class="dash" style="grid-template-columns:1fr">
+      <div class="dashmain" id="biz-overview">
+        <p class="small muted" style="margin:0 0 6px"><strong style="color:var(--green)">Corner Market</strong> · Grocery &amp; household essentials · Kansas City, Kansas &nbsp;·&nbsp; You set every price and approve every route. Nothing is discounted, listed, or donated automatically.</p>
+        <h3 style="margin:6px 0 8px">Hi Alex, we’ve identified $2,000 in potential sales value worth recovering.</h3>
+        <p class="small muted" style="margin:0;max-width:680px"><span class="illus">Illustrative figure</span>, $2,000 is an illustrative total across a sample set of flagged stock. It is not the value of the rice below, and it is not guaranteed revenue.</p>
+        <div class="kpis" style="margin-top:16px">
+          <div class="kpi"><span class="lbl">Inventory requiring review</span><b>35 items</b><span class="sub"><a href="#biz-alerts">See more examples</a></span></div>
+          <div class="kpi"><span class="lbl">Active offers</span><b>6</b><span class="sub">Across shopper &amp; B2B channels, sample concept</span></div>
+          <div class="kpi"><span class="lbl">Value recovered this month</span><b>$1,240</b><span class="sub">Illustrative example report figure, sample concept, not a sales record</span></div>
+          <div class="kpi"><span class="lbl">Pending team tasks</span><b id="taskCount">4</b><span class="sub"><a href="#biz-tasks">See tasks</a></span></div>
+        </div>
+
+        <div class="spotlight" id="biz-alerts">
+          <div class="sp-info">
+            <span class="illus">Tour step 1 · Opportunity to review</span>
+            <div class="sp-title">Long grain rice, 2 lb | 40 bags | $3.49 | 18 days</div>
+            <div class="sp-meta">Shelf stable pantry · Selling slowly at the current price · Start the guided example with this one item.</div>
+          </div>
+          <button class="btn rust" data-goto-tour="sell" style="font-size:16px;padding:14px 26px">Review opportunity</button>
+        </div>
+
+        <details class="moreexamples">
+          <summary>See more examples, full inventory list</summary>
+        <div class="alertrow">
+          <div class="info"><strong>Long grain rice, 2 lb bags, 40 units</strong><div class="meta">Shelf stable pantry · Selling slowly at current price · 18 days on shelf</div></div>
+          <div class="acts">
+            <button class="btn solid small" data-route="sell">Sell it</button>
+            <button class="btn small" data-route="donate">Donate</button>
+            <button class="btn small" data-route="waste">Waste Lab</button>
+          </div>
+        </div>
+
+        <div class="alertrow">
+          <div class="info"><strong>Paper towels, 6 roll packs, 24 units</strong><div class="meta">Household essentials · Seasonal overstock · Suitable for bulk sale</div></div>
+          <div class="acts">
+            <button class="btn solid small" data-route="sell">Sell it</button>
+            <button class="btn small" data-route="b2b">B2B bulk</button>
+            <button class="btn small" data-route="donate">Donate</button>
+          </div>
+        </div>
+
+        <div class="alertrow">
+          <div class="info"><strong>Laundry detergent, 100 fl oz, 18 units</strong><div class="meta">Household essentials · Promotional stock remaining after campaign end</div></div>
+          <div class="acts">
+            <button class="btn solid small" data-route="sell">Sell it</button>
+            <button class="btn small" data-route="b2b">B2B bulk</button>
+            <button class="btn small" data-route="donate">Donate</button>
+          </div>
+        </div>
+        </details>
+
+        <!-- SELL / PRICING GUIDANCE, GUIDED TOUR STEP 2 -->
+        <div class="routebox" id="route-sell">
+          <div class="tourstep-head"><span class="tag rust">Tour step 2 · Pricing Guidance</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
+          <h3>Sell it, long grain rice, 2 lb bags</h3>
+          <p class="muted" style="margin:0;max-width:640px">Pricing guidance brings the relevant facts together in one view, your stock position, how long it has been on the shelf, and illustrative nearby demand at different prices, so the markdown decision is informed, and always yours.</p>
+
+          <div class="factors">
+            <div class="factor"><div class="fl">Current price</div><div class="fv">$3.49</div><div class="fs">Per 2 lb bag</div></div>
+            <div class="factor"><div class="fl">Stock on hand</div><div class="fv">40 units</div><div class="fs">One full shelf bay</div></div>
+            <div class="factor"><div class="fl">Time on shelf</div><div class="fv">18 days</div><div class="fs">Sell through below category norm</div></div>
+            <div class="factor"><div class="fl">Margin floor</div><div class="fv">$1.85</div><div class="fs">Your set minimum per unit</div></div>
+          </div>
+
+          <div class="chartwrap">
+            <strong style="color:var(--green)">Illustrative nearby demand vs. shelf price</strong>
+            <p class="small muted" style="margin:2px 0 10px">Estimated units / week, example, not live data. This chart is a sample concept for how demand context could be shown; it is not a live forecast.</p>
+            <svg viewBox="0 0 560 240" role="img" aria-label="Bar chart, illustrative: at $3.49 estimated 12 units per week, at $2.99 estimated 22, at $2.49 estimated 38, at $2.29 estimated 45. Example figures, not live data.">
+              <line x1="52" y1="200" x2="540" y2="200" stroke="#b9cdc0" stroke-width="1.5"/>
+              <line x1="52" y1="150" x2="540" y2="150" stroke="#e3ede5" stroke-width="1"/>
+              <line x1="52" y1="100" x2="540" y2="100" stroke="#e3ede5" stroke-width="1"/>
+              <line x1="52" y1="50" x2="540" y2="50" stroke="#e3ede5" stroke-width="1"/>
+              <text x="44" y="204" text-anchor="end" font-size="12" fill="#5d6f66">0</text>
+              <text x="44" y="154" text-anchor="end" font-size="12" fill="#5d6f66">20</text>
+              <text x="44" y="104" text-anchor="end" font-size="12" fill="#5d6f66">40</text>
+              <text x="10" y="120" font-size="12" fill="#5d6f66" transform="rotate(-90 16 120)">Est. units / week</text>
+              <rect x="90" y="170" width="70" height="30" rx="4" fill="#9db8a7"/>
+              <rect x="215" y="145" width="70" height="55" rx="4" fill="#9db8a7"/>
+              <rect x="340" y="105" width="70" height="95" rx="4" fill="#b95c33"/>
+              <rect x="465" y="87" width="70" height="113" rx="4" fill="#14604a"/>
+              <text x="125" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#17251f">12</text>
+              <text x="250" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#17251f">22</text>
+              <text x="375" y="97" text-anchor="middle" font-size="14" font-weight="700" fill="#17251f">38</text>
+              <text x="500" y="79" text-anchor="middle" font-size="14" font-weight="700" fill="#17251f">45</text>
+              <text x="125" y="222" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0b3d2e">$3.49</text>
+              <text x="250" y="222" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0b3d2e">$2.99</text>
+              <text x="375" y="222" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0b3d2e">$2.49 ★</text>
+              <text x="500" y="222" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0b3d2e">$2.29</text>
+            </svg>
+            <p class="small muted" style="margin:6px 0 0">★ Suggested test price: <strong>$2.49</strong>. Local range for comparable rice in this example: $2.19 to $3.79; your price today: $3.49.</p>
+          </div>
+
+          <h4 style="color:var(--green);margin:16px 0 4px;font-size:17px">Choose a test price</h4>
+          <div class="priceopts" role="group" aria-label="Test price options">
+            <button type="button" data-price="3.49">$3.49, keep current</button>
+            <button type="button" data-price="2.99">$2.99</button>
+            <button type="button" data-price="2.49" class="rec" aria-pressed="true">$2.49, suggested</button>
+            <button type="button" data-price="2.29">$2.29, alternative</button>
+          </div>
+          <div class="customprice">
+            <label for="customPrice" style="font-weight:700;color:var(--green)">Or enter another approved price</label>
+            <input id="customPrice" type="number" min="1.86" step="0.01" placeholder="e.g. 2.69" inputmode="decimal">
+            <button class="btn small" type="button" id="customPriceBtn">Use this price</button>
+          </div>
+          <div class="marginbox" id="marginBox" aria-live="polite"></div>
+          <details class="howcalc">
+            <summary>How was this estimated?</summary>
+            <p class="small" style="color:#36493f">Margin per unit = chosen price − your $1.85 margin floor. Estimated weekly margin = margin per unit × the illustrative estimated units per week for that price in the chart above (for example, $2.49 − $1.85 = $0.64 per unit; $0.64 × 38 est. units/week ≈ $24.32/week above the floor). Chart volumes are example figures in this example, drawn to illustrate the concept from stock on hand, days on shelf, and comparable nearby prices, they are not live demand data or a forecast, and no result is guaranteed.</p>
+          </details>
+          <p style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 0">
+            <button class="btn solid" id="acceptPriceBtn">Accept price &amp; create shelf label</button>
+            <button class="btn" id="compare229Btn" type="button">Compare the $2.29 alternative</button>
+          </p>
+
+          <div class="labeldone" id="labelDone" hidden>
+            <strong>Shelf label ready.</strong> <span id="labelPrice"></span> Print the label below and attach it at the shelf.
+            <div class="shelflabel" id="shelfLabel" aria-label="Shelf label example">
+              <div class="sl-name">Long grain Rice · 2 lb</div>
+              <div class="sl-was">Was $3.49</div>
+              <div style="font-weight:800;color:var(--green);letter-spacing:.04em">NOW</div>
+              <div class="sl-price" id="labelPriceBig">$2.49</div>
+              <div class="small muted">Sample data · Corner Market · Save4Good</div>
+            </div>
+            <p style="margin:14px 0 0"><button class="btn rust" id="printLabelBtn" type="button">Download printable label</button></p>
+            <p class="small muted" style="margin:6px 0 0">Downloads the label as a printable file with the sample data above. This page is also print clean: printing it from your browser prints only the label.</p>
+          </div>
+          <p class="small muted" style="margin-bottom:0">Next in the tour: the same rice item can also be <a href="#route-donate">matched to a donation wish list</a> or <a href="#biz-b2b">prepared as a small wholesale lot</a>.</p>
+        </div>
+
+        <!-- DONATE, GUIDED TOUR STEP 3 -->
+        <div class="routebox hidden" id="route-donate">
+          <div class="tourstep-head"><span class="tag rust">Tour step 3 · Donation Matching</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
+          <h3>Donate it, matched to a wish list</h3>
+          <p class="muted" style="margin:0;max-width:680px">The same rice item, matched to wish lists. Add an amount to the example cart, adjust it, then review.</p>
+          <h4 style="color:var(--green);margin:18px 0 4px;font-size:17px">Example charities requesting this item</h4>
+          <p class="small muted" style="margin:0;max-width:680px">Each charity below shows how matching works. Each wish list includes the same item from the guided example, Long grain rice, 2 lb, along with the number of bags requested.</p>
+          <div class="orgs">
+            <div class="org"><span class="illus">Example charity</span><br><strong>Hope Harvest Pantry</strong>
+              <p class="small" style="margin:6px 0 0;color:var(--green);font-weight:700">Wish list includes:</p>
+              <ul><li class="match">Long grain rice, 2 lb, requests 15 bags</li><li>Pasta sauce</li><li>Canned beans</li></ul>
+              <div class="qtyctl"><label for="qty-pantry" class="small" style="font-weight:700">Bags</label><input id="qty-pantry" type="number" min="1" max="15" value="10"><button class="btn solid small" data-addcart="Hope Harvest Pantry" data-qty="qty-pantry" data-max="15">Add to cart</button></div></div>
+            <div class="org"><span class="illus">Example charity</span><br><strong>Riverbend Community Kitchen</strong>
+              <p class="small" style="margin:6px 0 0;color:var(--green);font-weight:700">Wish list includes:</p>
+              <ul><li class="match">Long grain rice, 2 lb, requests 12 bags</li><li>Canned vegetables</li><li>Cooking oil</li></ul>
+              <div class="qtyctl"><label for="qty-kitchen" class="small" style="font-weight:700">Bags</label><input id="qty-kitchen" type="number" min="1" max="12" value="8"><button class="btn solid small" data-addcart="Riverbend Community Kitchen" data-qty="qty-kitchen" data-max="12">Add to cart</button></div></div>
+            <div class="org"><span class="illus">Example charity</span><br><strong>Bright Futures Family Center</strong>
+              <p class="small" style="margin:6px 0 0;color:var(--green);font-weight:700">Wish list includes:</p>
+              <ul><li class="match">Long grain rice, 2 lb, requests 10 bags</li><li>Canned vegetables</li><li>Paper towels</li></ul>
+              <div class="qtyctl"><label for="qty-school" class="small" style="font-weight:700">Bags</label><input id="qty-school" type="number" min="1" max="10" value="10"><button class="btn solid small" data-addcart="Bright Futures Family Center" data-qty="qty-school" data-max="10">Add to cart</button></div></div>
+          </div>
+
+          <div class="cartbox" id="donationCart">
+            <h4 style="color:var(--green);margin:0 0 6px;font-size:18px">Example cart</h4>
+            <p class="small muted" id="cartEmpty" style="margin:0">Your example cart is empty. Add rice for an example charity above, for example: Long grain rice, 2 lb | 10 bags | Hope Harvest Pantry.</p>
+            <div id="cartRows"></div>
+            <p class="small" style="margin:10px 0 0"><strong id="cartTotal">Total: 0 bags</strong> <span class="muted">(from 40 bags on hand)</span></p>
+            <p style="margin:14px 0 0"><button class="btn rust" id="cartReviewBtn" type="button" disabled>Review donation</button></p>
+            <div id="cartReview" hidden style="margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px">
+              <strong style="color:var(--green)">Review, illustrative</strong>
+              <div id="cartReviewLines" class="small" style="margin:8px 0"></div>
+              <p class="small muted" style="margin:0">Next: review acceptance, pickup, destination and documentation. The receiving organization confirms acceptance, a handoff time is agreed, and proof of transfer is recorded in your reports. Nothing is donated automatically.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- WASTE LAB -->
+        <div class="routebox hidden" id="route-waste">
+          <div class="tourstep-head"><span class="tag">Waste Lab</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
+          <h3>Recover what cannot be sold or donated</h3>
+          <p class="muted" style="margin:0;max-width:640px">Every item follows the same ladder. Waste Lab manages the final steps and records where each item went, and, over time, shows which products repeatedly reach this stage, so ordering can adjust.</p>
+          <div class="ladder"><span>Sell</span><i>→</i><span>Donate</span><i>→</i><span>Reuse / Recycle</span><i>→</i><span>Compost</span><i>→</i><span>Landfill, last resort</span></div>
+          <p class="small" style="margin:10px 0 0"><span class="illus">Illustrative potential providers, not connected partners</span></p>
+          <div class="collectors">
+            <div class="org"><strong>KC Can Compost</strong> · Kansas City, MO
+              <p class="small muted" style="margin:6px 0 0">Shown as an illustrative potential provider to approach for commercial food waste collection. Eligible routing only covers food scraps and certified compostable material. Packaged shelf stable rice would go to Sell or Donate first, not compost.</p></div>
+            <div class="org"><strong>Compost Collective KC</strong> · Kansas City metro
+              <p class="small muted" style="margin:6px 0 0">Shown as an illustrative potential provider to approach for scheduled collection across the metro. Destination metrics in reports are by weight and destination, from collection records.</p></div>
+          </div>
+          <p class="small muted" style="margin-bottom:0">Diversion figures in example reports are illustrative; in live use they would be reported by confirmed weight and destination only.</p>
+        </div>
+
+        <!-- B2B -->
+        <div class="routebox" id="biz-b2b" style="border-color:var(--line)">
+          <div class="tourstep-head"><span class="tag line">B2B Bulk</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
+          <h3 style="margin-top:8px">Sell in bulk to business buyers</h3>
+          <p class="muted" style="margin:0 0 14px;max-width:640px">Excess stock can be offered as a single lot to other businesses, offices, caterers, smaller retailers, at terms you set, visible to business buyers only. Example: paper towels, 24 packs as one lot.</p>
+          <button class="btn solid small" id="b2bBtn">Create bulk lot, paper towels × 24</button>
+          <div class="toast" id="b2bToast" role="status">Bulk lot prepared in this guided example. Review the price and buyer terms, then publish it to business buyers when ready.</div>
+          <div style="border-top:1px solid var(--line);margin-top:18px;padding-top:16px">
+            <p style="margin:0 0 10px"><strong style="color:var(--green)">In the guided tour, the same rice item:</strong> <span class="muted">20 of the 40 bags could be prepared as one small wholesale lot for a caterer or smaller retailer, at a lot price you set, with the remaining 20 bags kept for the shelf or donation route.</span></p>
+            <button class="btn small" id="b2bRiceBtn" type="button">Prepare rice as a wholesale lot, 20 bags</button>
+            <div class="toast" id="b2bRiceToast" role="status">Rice wholesale lot prepared in this guided example: Long grain rice, 2 lb × 20 bags, one lot, business buyers only. Review the lot price and terms before anything is listed.</div>
+          </div>
+        </div>
+
+        <!-- TEAM & TASKS -->
+        <div class="grid2" style="margin-top:16px">
+          <div class="card" id="biz-team" style="box-shadow:none">
+            <div class="tourstep-head"><span class="tag">Training Hub</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
+            <h3 style="margin:10px 0 4px;font-size:20px">Assign a task</h3>
+            <p class="small muted" style="margin:0">Choose a team member and the task. Consultancy and Lean Six Sigma training modules for hotels and retail stores can be assigned the same way, with completion tracked for you. Training focuses on operations, service and business performance.</p>
+            <label class="flabel" for="taskPerson">Team member</label>
+            <select class="fluid" id="taskPerson"><option>Jordan M., Store Manager</option><option>Priya S., Shift Lead</option><option>Alex R., Grocery Associate</option><option>Sam T., Grocery Associate</option></select>
+            <label class="flabel" for="taskName">Task</label>
+            <select class="fluid" id="taskName"><option>Attach new clearance labels, rice aisle</option><option>Inspect product dates, packaged goods</option><option>Prepare paper towel lot for B2B pickup</option><option>Training: Lean Six Sigma Foundations</option><option>Training: Operational Excellence for Retail Stores</option><option>Training: Service Excellence for Hotels</option></select>
+            <label class="flabel" for="taskDue">Due</label>
+            <select class="fluid" id="taskDue"><option>Today, before close</option><option>Tomorrow by noon</option><option>This week</option></select>
+            <p style="margin:16px 0 0"><button class="btn solid" id="assignBtn" style="width:100%">Assign Task</button></p>
+            <div class="toast" id="assignToast" role="status"></div>
+          </div>
+          <div class="card" id="biz-tasks" style="box-shadow:none">
+            <div class="tourstep-head"><span class="tag line">Team &amp; Results</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
+            <h3 style="margin:10px 0 4px;font-size:20px">Open tasks</h3>
+            <div id="taskList">
+              <div class="taskitem"><span>Tag final clearance inventory, Jordan M.</span><span class="status">In progress</span></div>
+              <div class="taskitem"><span>Inspect product dates, Priya S.</span><span class="status">Assigned</span></div>
+              <div class="taskitem"><span>Training: Lean Six Sigma Foundations, Alex R.</span><span class="status grey">Due this week</span></div>
+              <div class="taskitem"><span>Prepare items for B2B pickup, Sam T.</span><span class="status">Assigned</span></div>
+            </div>
+            <h3 style="margin:20px 0 6px;font-size:17px">Training modules available</h3>
+            <p class="small muted" style="margin:0">Business consultancy training for hotels and retail stores covering Lean Six Sigma Foundations, Process Improvement and Waste Reduction, Operational Excellence, Service Excellence and Guest Experience, Team Leadership and Performance Management, and Standard Operating Procedures in Practice. These modules support any applicable hotel or retail business.</p>
+            <h3 style="margin:20px 0 6px;font-size:17px">Monthly report</h3>
+            <p class="small muted" style="margin:0"><span class="illus">Illustrative example report</span>, Recovered revenue, sell through by route, donations, diversion by weight and destination, and proof of transfer. Example figures in this example are illustrative concepts, not confirmed completed sales; in live use, sales would be labeled confirmed only with actual transaction evidence.</p>
+          </div>
+        </div>
+
+        <p style="margin:20px 0 4px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn small" href="../">← Back to Homepage</a> <a class="btn small" href="../businesses/">← Back to Businesses</a>
+          <a class="btn rust small" href="../businesses/#partnership">Connect With Save4Good</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+<div id="printLabelArea" aria-hidden="true">
+  <div style="border:2px solid #0b3d2e;border-radius:10px;padding:18px 22px;max-width:360px;text-align:center;font-family:Georgia,serif">
+    <div style="font-weight:800;color:#0b3d2e;font-size:16px;font-family:system-ui,sans-serif">Long grain Rice · 2 lb</div>
+    <div style="font-size:14px;color:#5d6f66;text-decoration:line-through;font-family:system-ui,sans-serif">Was $3.49</div>
+    <div style="font-weight:800;color:#0b3d2e;letter-spacing:.04em;font-family:system-ui,sans-serif">NOW</div>
+    <div style="font-size:38px;font-weight:700;color:#8f4525" id="printLabelPrice">$2.49</div>
+    <div style="font-size:13px;color:#5d6f66;font-family:system-ui,sans-serif">Sample data · Corner Market · Save4Good</div>
+  </div>
+</div>
+<footer><div class="wrap"><span>Save4Good | Connected infrastructure for people, businesses, and the planet.</span><span>Sources: <a href="https://refed.org/" target="_blank" rel="noopener">ReFED</a>, <a href="https://www.unep.org/" target="_blank" rel="noopener">UNEP</a>, <a href="https://www.usda.gov/" target="_blank" rel="noopener">USDA</a>.</span></div></footer>
+<script>
+(function(){
+
+// ---- business routes ----
+  function openRoute(name){
+    ['sell','donate','waste'].forEach(function(r){var p=document.getElementById('route-'+r); if(p) p.classList.toggle('hidden', r!==name)});
+    var target=document.getElementById('route-'+name); if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  document.querySelectorAll('[data-route]').forEach(function(b){b.addEventListener('click',function(){
+    var r=b.getAttribute('data-route');
+    if(r==='b2b'){document.getElementById('biz-b2b').scrollIntoView({behavior:'smooth',block:'center'});return;}
+    openRoute(r);
+  })});
+  document.querySelectorAll('[data-goto-tour]').forEach(function(b){b.addEventListener('click',function(){
+    openRoute(b.getAttribute('data-goto-tour'));
+  })});
+  document.querySelectorAll('a[href="#route-sell"],a[href="#route-donate"],a[href="#route-waste"]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();openRoute(a.getAttribute('href').slice(7));});
+  });
+
+  // ---- capability cards: click any capability to explore its example in the Business Experience ----
+  function goToCap(card){
+    var targetId=card.getAttribute('data-cap-target');
+    var route=card.getAttribute('data-cap-route');
+    show('biz');
+    setTimeout(function(){
+      if(route){ openRoute(route); return; }
+      var target=document.getElementById(targetId);
+      if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+    },90);
+  }
+  document.querySelectorAll('[data-cap-target]').forEach(function(card){
+    card.addEventListener('click',function(){goToCap(card);});
+    card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();goToCap(card);}});
+  });
+
+  // ---- pricing decision: options, custom price, margin impact, printable label ----
+  var FLOOR=1.85, STOCK=40;
+  var DEMAND={'3.49':12,'2.99':22,'2.49':38,'2.29':45};
+  var chosenPrice=2.49;
+  function fmt(n){return '$'+n.toFixed(2)}
+  function renderMargin(){
+    var p=chosenPrice;
+    var perUnit=p-FLOOR;
+    var est=DEMAND[p.toFixed(2)];
+    var box=document.getElementById('marginBox');
+    var html='<strong style="color:var(--green)">Estimated margin impact at '+fmt(p)+':</strong> '+fmt(perUnit)+' per unit above your '+fmt(FLOOR)+' floor';
+    if(est){ html+=' · ≈ '+fmt(perUnit*est)+' per week above the floor at the illustrative estimate of '+est+' units/week'; }
+    else{ html+=' · ≈ '+fmt(perUnit*STOCK)+' total above the floor if all '+STOCK+' bags sell at this price (custom price, no chart estimate)'; }
+    html+=' · Full stock of '+STOCK+' bags = '+fmt(p*STOCK)+' at this price.';
+    if(p===2.29){ html+=' <em>Compared with $2.49: $0.20 less margin per unit, with a higher illustrative volume (45 vs 38 units/week).</em>'; }
+    box.innerHTML=html;
+    document.getElementById('labelPriceBig').textContent=fmt(p);
+    document.getElementById('printLabelPrice').textContent=fmt(p);
+  }
+  function selectPrice(p,fromButton){
+    chosenPrice=p;
+    document.querySelectorAll('[data-price]').forEach(function(btn){
+      btn.setAttribute('aria-pressed', parseFloat(btn.getAttribute('data-price'))===p?'true':'false');
+    });
+    renderMargin();
+  }
+  document.querySelectorAll('[data-price]').forEach(function(btn){btn.addEventListener('click',function(){selectPrice(parseFloat(btn.getAttribute('data-price')))})});
+  document.getElementById('customPriceBtn').addEventListener('click',function(){
+    var v=parseFloat(document.getElementById('customPrice').value);
+    if(!v||v<=FLOOR){document.getElementById('marginBox').innerHTML='<strong style="color:#b3261e">Please enter a price above your '+fmt(FLOOR)+' margin floor.</strong>';return;}
+    selectPrice(Math.round(v*100)/100);
+  });
+  document.getElementById('compare229Btn').addEventListener('click',function(){selectPrice(2.29);document.getElementById('marginBox').scrollIntoView({behavior:'smooth',block:'center'});});
+  document.getElementById('acceptPriceBtn').addEventListener('click',function(){
+    var d=document.getElementById('labelDone'); d.hidden=false;
+    document.getElementById('labelPrice').textContent='Price accepted at '+fmt(chosenPrice)+' in this guided example.';
+    renderMargin();
+    d.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  document.getElementById('printLabelBtn').addEventListener('click',function(){
+    var labelHtml='<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Shelf label, Long grain Rice, 2 lb</title></head><body style="margin:24px;font-family:system-ui,sans-serif">'
+      +'<div style="border:2px solid #0b3d2e;border-radius:10px;padding:18px 22px;max-width:360px;text-align:center">'
+      +'<div style="font-weight:800;color:#0b3d2e;font-size:16px">Long grain Rice · 2 lb</div>'
+      +'<div style="font-size:14px;color:#5d6f66;text-decoration:line-through">Was $3.49</div>'
+      +'<div style="font-weight:800;color:#0b3d2e;letter-spacing:.04em">NOW</div>'
+      +'<div style="font-family:Georgia,serif;font-size:38px;font-weight:700;color:#8f4525">'+fmt(chosenPrice)+'</div>'
+      +'<div style="font-size:13px;color:#5d6f66">Sample data · Corner Market · Save4Good</div>'
+      +'</div></body></html>';
+    var blob=new Blob([labelHtml],{type:'text/html'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='shelf-label-rice-2lb.html';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){URL.revokeObjectURL(a.href);},2000);
+  });
+  renderMargin();
+
+  // ---- donation wish-list example cart ----
+  var cart={};
+  function renderCart(){
+    var rows=document.getElementById('cartRows'); rows.innerHTML='';
+    var names=Object.keys(cart); var total=0;
+    names.forEach(function(name){
+      total+=cart[name];
+      var row=document.createElement('div'); row.className='cartrow';
+      var label=document.createElement('span'); label.innerHTML=''; label.textContent='Long grain rice, 2 lb | '+name;
+      var ctl=document.createElement('div'); ctl.className='qtyctl';
+      var input=document.createElement('input'); input.type='number'; input.min='1'; input.max='40'; input.value=cart[name]; input.setAttribute('aria-label','Quantity for '+name);
+      input.addEventListener('change',function(){var v=parseInt(input.value,10); if(!v||v<1){delete cart[name];}else{cart[name]=Math.min(v,40);} renderCart();});
+      var rm=document.createElement('button'); rm.type='button'; rm.className='btn small'; rm.textContent='Remove';
+      rm.addEventListener('click',function(){delete cart[name]; renderCart();});
+      ctl.appendChild(input); ctl.appendChild(rm);
+      row.appendChild(label); row.appendChild(ctl);
+      rows.appendChild(row);
+    });
+    document.getElementById('cartEmpty').style.display=names.length?'none':'block';
+    document.getElementById('cartTotal').textContent='Total: '+total+' bags';
+    document.getElementById('cartReviewBtn').disabled=!names.length;
+    if(!names.length) document.getElementById('cartReview').hidden=true;
+  }
+  document.querySelectorAll('[data-addcart]').forEach(function(b){b.addEventListener('click',function(){
+    var name=b.getAttribute('data-addcart');
+    var q=parseInt(document.getElementById(b.getAttribute('data-qty')).value,10)||0;
+    var max=parseInt(b.getAttribute('data-max'),10)||40;
+    q=Math.max(1,Math.min(q,max));
+    cart[name]=(cart[name]||0)+q;
+    var sum=0; Object.keys(cart).forEach(function(k){sum+=cart[k]});
+    if(sum>40){cart[name]-=(sum-40);}
+    renderCart();
+    document.getElementById('donationCart').scrollIntoView({behavior:'smooth',block:'center'});
+  })});
+  document.getElementById('cartReviewBtn').addEventListener('click',function(){
+    var lines=Object.keys(cart).map(function(name){return 'Long grain rice, 2 lb | '+cart[name]+' bags | '+name;});
+    document.getElementById('cartReviewLines').textContent=lines.join('  ·  ');
+    var r=document.getElementById('cartReview'); r.hidden=false;
+    r.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  renderCart();
+  document.getElementById('b2bBtn').addEventListener('click',function(){document.getElementById('b2bToast').classList.add('show')});
+  document.getElementById('b2bRiceBtn').addEventListener('click',function(){document.getElementById('b2bRiceToast').classList.add('show')});
+
+  // ---- assign task ----
+  var taskTotal=4;
+  document.getElementById('assignBtn').addEventListener('click',function(){
+    var person=document.getElementById('taskPerson').value.split(', ')[0];
+    var task=document.getElementById('taskName').value;
+    var due=document.getElementById('taskDue').value;
+    var row=document.createElement('div'); row.className='taskitem';
+    var label=document.createElement('span'); label.textContent=task+', '+person+' · '+due;
+    var badge=document.createElement('span'); badge.className='status'; badge.textContent='Guided example';
+    row.appendChild(label); row.appendChild(badge);
+    document.getElementById('taskList').prepend(row);
+    taskTotal++; document.getElementById('taskCount').textContent=taskTotal;
+    var t=document.getElementById('assignToast');
+    t.textContent='Added to this guided example: “'+task+'” for '+person+' ('+due+'). In this example the task is not sent to the team member.';
+    t.classList.add('show');
+  });
+})();
+
+</script>
+</body></html>
