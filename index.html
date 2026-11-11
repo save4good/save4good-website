@@ -31,7 +31,9 @@ footer{background:var(--green);color:#cfe8d6;padding:16px 0;font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 details{border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0;background:#fff}
 details summary{font-weight:800;color:var(--green);cursor:pointer}
-@media(max-width:860px){h1{font-size:36px}.two,.three,.steps{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+.hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.hero-grid figure{margin:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}.hero-grid img{width:100%;height:220px;object-fit:cover}.hero-grid figcaption{padding:12px 14px;font-weight:700;color:var(--green);font-size:14px}
+@media(max-width:860px){h1{font-size:36px}.two,.three,.steps{grid-template-columns:1fr}.hero-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+@media(max-width:560px){.hero-grid{grid-template-columns:1fr}}
 </style></head><body><header><div class="wrap nav">
 <a class="brand" href=""><img src="logo.png" alt="Save4Good logo">Save4Good</a>
 <nav class="navlinks"><a href="">Home</a><a href="families/">For Families</a><a href="businesses/">For Businesses</a><a href="our-story/">Our Story</a></nav>
@@ -47,7 +49,12 @@ details summary{font-weight:800;color:var(--green);cursor:pointer}
 <div class="card"><h2>For Families</h2><p>Your family knows what it needs. Discover a better way to find it.</p><p><a class="btn solid" href="families/">Explore for Families</a></p></div>
 <div class="card"><h2>For Businesses</h2><p>Your next revenue opportunity deserves a smarter operating system.</p><p><a class="btn solid" href="businesses/">Explore Business Partnerships</a></p></div>
 </div></section>
-<section><div class="wrap"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80" alt="Fresh grocery products" style="border-radius:18px;width:100%;height:420px;object-fit:cover"></div></section>
+<section><div class="wrap"><div class="hero-grid">
+<figure><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80" alt="Fresh grocery products on shelves"><figcaption>Grocery stores</figcaption></figure>
+<figure><img src="hero-hotel.jpg" alt="Hotel bed with white linens, folded towels and toiletry bottles"><figcaption>Hotels: linens and toiletries</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80" alt="Inside a retail store with non-food clearance items on shelves and tables"><figcaption>Retail: clearance, non-food items</figcaption></figure>
+<figure><img src="hero-hotbar.jpg" alt="Grocery hot bar with steaming prepared meals in serving trays"><figcaption>Hot bars and prepared meals</figcaption></figure>
+</div></div></section>
 <div class="wrap stats">
 <div><span class="tag">Market context, not Save4Good performance.</span><br><b>$380B</b><br><small>U.S. surplus-food value<br>2024 · <a href="https://refed.org/" target="_blank" rel="noopener">ReFED</a></small></div>
 <div><b>29%</b><br><small>U.S. food supply that became surplus<br>2024 · <a href="https://refed.org/" target="_blank" rel="noopener">ReFED</a></small></div>
