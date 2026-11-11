@@ -261,6 +261,25 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
 .qtyctl{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .form-note{background:var(--mint);border:1px solid var(--green2);border-radius:12px;padding:14px 16px;display:none;font-size:14.5px}
 .form-note.show{display:block}
+
+/* ============ left vertical navigation, tabbed panels (Nov 11) ============ */
+.biz-layout{display:grid;grid-template-columns:232px minmax(0,1fr);gap:18px;align-items:start;margin:18px 0 8px}
+.biznav{position:sticky;top:76px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:var(--shadow-sm)}
+.biznav .biznav-title{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:6px 10px 10px}
+.biznav a{display:flex;align-items:center;min-height:46px;padding:10px 12px;border-radius:10px;font-size:14.5px;font-weight:700;text-decoration:none;color:var(--green)}
+.biznav a:hover{background:var(--mint)}
+.biznav a[aria-current="true"]{background:var(--green);color:#fff}
+.biz-panel{display:none}
+.biz-panel.active{display:block}
+.biz-panel .routebox{margin-top:0}
+.biz-panel .card{margin-top:0}
+@media(max-width:860px){
+  .biz-layout{grid-template-columns:1fr}
+  .biznav{position:static;display:flex;flex-wrap:wrap;gap:6px}
+  .biznav .biznav-title{width:100%;padding-bottom:4px}
+  .biznav a{min-height:42px;padding:8px 12px;background:var(--mint2);border:1px solid var(--line);border-radius:999px}
+  .biznav a[aria-current="true"]{background:var(--green);color:#fff}
+}
 @media print{
   body>*{display:none!important}
   #printLabelArea{display:block!important;position:static!important}
@@ -301,20 +320,23 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
   <div class="wrap biz-head">
     <span class="tag">Business Experience</span>
     <h2>See how Save4Good connects sales, demand, operations and recovery.</h2>
-    <nav class="mainnav" aria-label="Business workspace, main navigation">
-      <a href="#biz-overview">Overview</a>
-      <a href="#route-sell">Inventory &amp; Pricing</a>
-      <a href="#biz-b2b">B2B Bulk</a>
-      <a href="#route-donate">Donations</a>
-      <a href="#route-waste">Waste Lab</a>
-      <a href="#biz-team">Team &amp; Training</a>
-      <a href="#biz-tasks">Reports / Tasks &amp; Results</a>
-    </nav>
   </div>
 
   <div class="wrap">
-    <div class="dash" style="grid-template-columns:1fr">
-      <div class="dashmain" id="biz-overview">
+    <div class="biz-layout">
+      <nav class="biznav" aria-label="Business workspace, main navigation">
+        <div class="biznav-title">Business Experience</div>
+        <a href="#biz-overview" data-panel="overview" aria-current="true">Overview</a>
+        <a href="#route-sell" data-panel="pricing" aria-current="false">Inventory &amp; Pricing</a>
+        <a href="#biz-b2b" data-panel="b2b" aria-current="false">B2B Bulk</a>
+        <a href="#route-donate" data-panel="donations" aria-current="false">Donations</a>
+        <a href="#route-waste" data-panel="waste" aria-current="false">Waste Lab</a>
+        <a href="#biz-team" data-panel="team" aria-current="false">Team &amp; Training</a>
+        <a href="#biz-tasks" data-panel="reports" aria-current="false">Reports / Tasks &amp; Results</a>
+      </nav>
+      <div class="dashmain">
+        <section class="biz-panel active" id="panel-overview" aria-label="Overview">
+        <div id="biz-overview">
         <p class="small muted" style="margin:0 0 6px"><strong style="color:var(--green)">Corner Market</strong> · Grocery &amp; household essentials · Kansas City, Kansas &nbsp;·&nbsp; You set every price and approve every route. Nothing is discounted, listed, or donated automatically.</p>
         <h3 style="margin:6px 0 8px">Hi Alex, we’ve identified $2,000 in potential sales value worth recovering.</h3>
         <p class="small muted" style="margin:0;max-width:680px"><span class="illus">Illustrative figure</span>, $2,000 is an illustrative total across a sample set of flagged stock. It is not the value of the rice below, and it is not guaranteed revenue.</p>
@@ -363,7 +385,9 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
           </div>
         </div>
         </details>
-
+        </div>
+        </section>
+        <section class="biz-panel" id="panel-pricing" aria-label="Inventory and Pricing">
         <!-- SELL / PRICING GUIDANCE, GUIDED TOUR STEP 2 -->
         <div class="routebox" id="route-sell">
           <div class="tourstep-head"><span class="tag rust">Tour step 2 · Pricing Guidance</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
@@ -442,8 +466,10 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
           <p class="small muted" style="margin-bottom:0">Next in the tour: the same rice item can also be <a href="#route-donate">matched to a donation wish list</a> or <a href="#biz-b2b">prepared as a small wholesale lot</a>.</p>
         </div>
 
+        </section>
+        <section class="biz-panel" id="panel-donations" aria-label="Donations">
         <!-- DONATE, GUIDED TOUR STEP 3 -->
-        <div class="routebox hidden" id="route-donate">
+        <div class="routebox" id="route-donate">
           <div class="tourstep-head"><span class="tag rust">Tour step 3 · Donation Matching</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
           <h3>Donate it, matched to a wish list</h3>
           <p class="muted" style="margin:0;max-width:680px">The same rice item, matched to wish lists. Add an amount to the example cart, adjust it, then review.</p>
@@ -478,8 +504,10 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
           </div>
         </div>
 
+        </section>
+        <section class="biz-panel" id="panel-waste" aria-label="Waste Lab">
         <!-- WASTE LAB -->
-        <div class="routebox hidden" id="route-waste">
+        <div class="routebox" id="route-waste">
           <div class="tourstep-head"><span class="tag">Waste Lab</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
           <h3>Recover what cannot be sold or donated</h3>
           <p class="muted" style="margin:0;max-width:640px">Every item follows the same ladder. Waste Lab manages the final steps and records where each item went, and, over time, shows which products repeatedly reach this stage, so ordering can adjust.</p>
@@ -494,6 +522,8 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
           <p class="small muted" style="margin-bottom:0">Diversion figures in example reports are illustrative; in live use they would be reported by confirmed weight and destination only.</p>
         </div>
 
+        </section>
+        <section class="biz-panel" id="panel-b2b" aria-label="B2B Bulk">
         <!-- B2B -->
         <div class="routebox" id="biz-b2b" style="border-color:var(--line)">
           <div class="tourstep-head"><span class="tag line">B2B Bulk</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
@@ -508,8 +538,9 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
           </div>
         </div>
 
-        <!-- TEAM & TASKS -->
-        <div class="grid2" style="margin-top:16px">
+        </section>
+        <section class="biz-panel" id="panel-team" aria-label="Team and Training">
+        <!-- TEAM & TRAINING -->
           <div class="card" id="biz-team" style="box-shadow:none">
             <div class="tourstep-head"><span class="tag">Training Hub</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
             <h3 style="margin:10px 0 4px;font-size:20px">Assign a task</h3>
@@ -523,6 +554,8 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
             <p style="margin:16px 0 0"><button class="btn solid" id="assignBtn" style="width:100%">Assign Task</button></p>
             <div class="toast" id="assignToast" role="status"></div>
           </div>
+        </section>
+        <section class="biz-panel" id="panel-reports" aria-label="Reports, Tasks and Results">
           <div class="card" id="biz-tasks" style="box-shadow:none">
             <div class="tourstep-head"><span class="tag line">Team &amp; Results</span><a class="backlink" href="#biz-overview">← Back to overview</a></div>
             <h3 style="margin:10px 0 4px;font-size:20px">Open tasks</h3>
@@ -537,14 +570,13 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
             <h3 style="margin:20px 0 6px;font-size:17px">Monthly report</h3>
             <p class="small muted" style="margin:0"><span class="illus">Illustrative example report</span>, Recovered revenue, sell through by route, donations, diversion by weight and destination, and proof of transfer. Example figures in this example are illustrative concepts, not confirmed completed sales; in live use, sales would be labeled confirmed only with actual transaction evidence.</p>
           </div>
-        </div>
-
-        <p style="margin:20px 0 4px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn small" href="../">← Back to Homepage</a> <a class="btn small" href="../businesses/">← Back to Businesses</a>
-          <a class="btn rust small" href="../businesses/#partnership">Connect With Save4Good</a>
-        </p>
+        </section>
       </div>
     </div>
+    <p style="margin:20px 0 4px;display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn small" href="../">← Back to Homepage</a> <a class="btn small" href="../businesses/">← Back to Businesses</a>
+      <a class="btn rust small" href="../businesses/#partnership">Connect With Save4Good</a>
+    </p>
   </div>
 </main>
 <div id="printLabelArea" aria-hidden="true">
@@ -560,28 +592,59 @@ details.howcalc summary{cursor:pointer;font-weight:800;color:var(--green);paddin
 <script>
 (function(){
 
-// ---- business routes ----
-  function openRoute(name){
-    ['sell','donate','waste'].forEach(function(r){var p=document.getElementById('route-'+r); if(p) p.classList.toggle('hidden', r!==name)});
-    var target=document.getElementById('route-'+name); if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+// ---- business panels: left vertical navigation, one module at a time ----
+  var PANELS = ['overview','pricing','b2b','donations','waste','team','reports'];
+  var PANEL_BY_ID = {
+    'biz-overview':'overview','route-sell':'pricing','biz-b2b':'b2b',
+    'route-donate':'donations','route-waste':'waste','biz-team':'team','biz-tasks':'reports'
+  };
+  function showPanel(name, scroll){
+    if(PANELS.indexOf(name)===-1) name='overview';
+    PANELS.forEach(function(n){
+      var p=document.getElementById('panel-'+n);
+      if(p) p.classList.toggle('active', n===name);
+    });
+    document.querySelectorAll('.biznav a[data-panel]').forEach(function(a){
+      a.setAttribute('aria-current', a.getAttribute('data-panel')===name ? 'true' : 'false');
+    });
+    if(scroll!==false){
+      var layout=document.querySelector('.biz-layout');
+      if(layout) layout.scrollIntoView({behavior:'smooth',block:'start'});
+    }
   }
+  function openRoute(name){
+    var map={sell:'pricing',donate:'donations',waste:'waste',b2b:'b2b'};
+    showPanel(map[name]||'overview');
+  }
+  document.querySelectorAll('.biznav a[data-panel]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();showPanel(a.getAttribute('data-panel'));});
+  });
   document.querySelectorAll('[data-route]').forEach(function(b){b.addEventListener('click',function(){
-    var r=b.getAttribute('data-route');
-    if(r==='b2b'){document.getElementById('biz-b2b').scrollIntoView({behavior:'smooth',block:'center'});return;}
-    openRoute(r);
+    openRoute(b.getAttribute('data-route'));
   })});
   document.querySelectorAll('[data-goto-tour]').forEach(function(b){b.addEventListener('click',function(){
     openRoute(b.getAttribute('data-goto-tour'));
   })});
-  document.querySelectorAll('a[href="#route-sell"],a[href="#route-donate"],a[href="#route-waste"]').forEach(function(a){
-    a.addEventListener('click',function(e){e.preventDefault();openRoute(a.getAttribute('href').slice(7));});
+  // Back to overview links, and in-page links to a module, switch panels instead of scrolling a long page.
+  document.querySelectorAll('a[href="#biz-overview"]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();showPanel('overview');});
+  });
+  document.querySelectorAll('a[href="#route-sell"],a[href="#route-donate"],a[href="#route-waste"],a[href="#biz-b2b"],a[href="#biz-team"],a[href="#biz-tasks"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      showPanel(PANEL_BY_ID[a.getAttribute('href').slice(1)]||'overview');
+    });
+  });
+  // "See more examples" stays on the Overview panel.
+  document.querySelectorAll('a[href="#biz-alerts"]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();showPanel('overview');});
   });
 
   // ---- capability cards: click any capability to explore its example in the Business Experience ----
   function goToCap(card){
     var targetId=card.getAttribute('data-cap-target');
     var route=card.getAttribute('data-cap-route');
-    show('biz');
+    if(typeof show==='function'){show('biz');}
     setTimeout(function(){
       if(route){ openRoute(route); return; }
       var target=document.getElementById(targetId);
