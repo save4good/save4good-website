@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://save-4-good.com/sitemap.xml
